@@ -142,7 +142,7 @@ footer .disclaimer { text-align: right; line-height: 1.5; }
 @media (max-width: 980px) {
   .site-header { grid-template-columns: 1fr auto; height: 80px; }
   .desktop-nav, .header-cta { display: none; }
-  .menu-toggle { display: grid; gap: 7px; padding: 12px; border: 0; background: transparent; }
+  .menu-toggle { display: grid; min-height: 44px; gap: 7px; place-content: center; padding: 12px; border: 0; background: transparent; }
   .menu-toggle span { display: block; width: 26px; height: 1px; background: var(--white); transition: transform .25s ease; }
   .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(4px) rotate(45deg); }
   .menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-4px) rotate(-45deg); }
