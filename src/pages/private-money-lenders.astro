@@ -1,0 +1,30 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import MailtoForm from '../components/MailtoForm.astro';
+---
+
+<SiteLayout title="Private Money Lending" description="Submit a private money lending request for a qualified real estate opportunity to Fran Legacy.">
+  <section class="form-page-hero funding-hero"><p class="eyebrow"><span></span> Private money lending</p><h1>Strong deals deserve a <em>clear capital story.</em></h1><p>Share the property, terms, experience, and exit strategy so we can evaluate fit efficiently.</p></section>
+  <section class="form-page-grid lending-grid">
+    <aside><p class="section-kicker">Before you begin</p><h2>Come prepared with the deal.</h2><p>Helpful submissions include a signed purchase agreement, lender terms, valuation support, scope of work, borrower entity documents, and property photos.</p><div class="info-card"><span class="mono">Need EMD funding instead?</span><p>Use the shorter transactional lending request for earnest money or double-close support.</p><a href="/emd-lending">Go to EMD lending ↗</a></div></aside>
+    <MailtoForm kind="pml">
+      <div class="form-section-title"><span>01</span><h3>Borrower</h3></div>
+      <div class="field-row"><label>First name<input name="First name" required /></label><label>Last name<input name="Last name" required /></label></div>
+      <div class="field-row"><label>Email<input type="email" name="Email" required /></label><label>Phone<input type="tel" name="Phone" required /></label></div>
+      <label>Business name<input name="Business name" required /></label>
+      <label>Business address<input name="Business address" required /></label>
+      <label>Borrower experience<textarea name="Borrower experience" rows="3"></textarea></label>
+      <div class="form-section-title"><span>02</span><h3>Property & terms</h3></div>
+      <label>Full property address<input name="Property address" required /></label>
+      <div class="field-row"><label>Property type<input name="Property type" required /></label><label>Purchase price<input name="Purchase price" inputmode="decimal" required /></label></div>
+      <div class="field-row"><label>As-is value<input name="As-is value" required /></label><label>ARV<input name="ARV" required /></label></div>
+      <div class="field-row"><label>Amount needed<input name="Amount needed" required /></label><label>How long are funds needed?<input name="Term needed" required /></label></div>
+      <div class="field-row"><label>Maximum rate offered<input name="Maximum rate" required /></label><label>Funding deadline<input type="date" name="Funding deadline" required /></label></div>
+      <label>Use of funds and exit strategy<textarea name="Use of funds and exit strategy" rows="4" required></textarea></label>
+      <label>Rehab cost and scope<textarea name="Rehab cost and scope" rows="4"></textarea></label>
+      <label>Supporting document names<input type="file" name="Supporting files" multiple /></label>
+      <label>Additional links and notes<textarea name="Links and notes" rows="4" placeholder="Links to photos, signed PSA, appraisal/CMA, entity documents, and contractor quotes."></textarea></label>
+      <label class="check-line"><input type="checkbox" name="Background check consent" value="Yes" /> I am open to a background check if required.</label>
+    </MailtoForm>
+  </section>
+</SiteLayout>

@@ -1,0 +1,40 @@
+---
+interface Props {
+  kind: 'consultation' | 'pml' | 'emd';
+}
+
+const { kind } = Astro.props;
+const subjects = {
+  consultation: 'Consultation request',
+  pml: 'Private money lending request',
+  emd: 'EMD / transactional lending request',
+};
+---
+
+<form class="intake-form" data-mailto-form data-subject={subjects[kind]}>
+  <slot />
+  <button class="button button-dark" type="submit">Send request <span>↗</span></button>
+  <p class="form-note">This opens your email app with your information pre-filled. Add any supporting files before sending.</p>
+</form>
+
+<script>
+  document.querySelectorAll('[data-mailto-form]').forEach((form) => {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const element = form as HTMLFormElement;
+      if (!element.reportValidity()) return;
+      const data = new FormData(element);
+      const lines: string[] = [];
+      data.forEach((value, key) => {
+        if (value instanceof File) {
+          if (value.name) lines.push(`${key}: ${value.name} (attach manually)`);
+        } else if (value) {
+          lines.push(`${key}: ${value}`);
+        }
+      });
+      const subject = encodeURIComponent(element.dataset.subject || 'Website request');
+      const body = encodeURIComponent(lines.join('\n'));
+      window.location.href = `mailto:tfrancisco@franlegacy.com?subject=${subject}&body=${body}`;
+    });
+  });
+</script>

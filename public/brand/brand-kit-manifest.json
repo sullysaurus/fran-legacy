@@ -1,0 +1,37 @@
+{
+  "brand": "Fran Legacy",
+  "website": "https://franlegacy.com",
+  "contact": {
+    "phone": "877 450 1550",
+    "email": "tfrancisco@franlegacy.com",
+    "location": "Raleigh, NC"
+  },
+  "colors": {
+    "navy": "#071A2A",
+    "cyan": "#58CCE0",
+    "paper": "#F0EDE4"
+  },
+  "typefaces": ["Newsreader", "Instrument Sans", "DM Mono"],
+  "assets": {
+    "logos": [
+      "fran-legacy-logo-primary.svg",
+      "fran-legacy-logo-primary.png",
+      "fran-legacy-logo-reversed.svg",
+      "fran-legacy-logo-reversed.png",
+      "fran-legacy-avatar.svg",
+      "fran-legacy-avatar.png"
+    ],
+    "social": [
+      "og-social-share.png",
+      "facebook-post.png",
+      "facebook-cover.png",
+      "linkedin-post.png",
+      "linkedin-company-cover.png",
+      "instagram-square.png",
+      "instagram-portrait.png",
+      "instagram-story.png",
+      "x-header.png"
+    ],
+    "web_and_email": ["email-header.png", "favicon-512.png", "apple-touch-icon.png"]
+  }
+}

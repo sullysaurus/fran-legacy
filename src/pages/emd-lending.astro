@@ -1,0 +1,30 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import MailtoForm from '../components/MailtoForm.astro';
+const exits = ['Assignment', 'Wholesale', 'Double close', 'Short-term rental', 'Mid-term rental', 'Long-term rental', 'Co-living', 'Fix, flip & sell', 'Permanent lending'];
+---
+
+<SiteLayout title="EMD & Transactional Lending" description="Request earnest money deposit or short-term transactional funding from Fran Legacy.">
+  <section class="form-page-hero emd-hero"><p class="eyebrow"><span></span> EMD & transactional lending</p><h1>Close the gap between a signed contract and a <em>fundable deal.</em></h1><p>For qualified earnest-money, double-close, and short-duration real estate transactions.</p></section>
+  <section class="form-page-grid lending-grid">
+    <aside><p class="section-kicker">Fast review starts here</p><h2>Give us the complete picture.</h2><p>Funding decisions depend on timing, documentation, title details, exit strategy, and a clear explanation of how the transaction works.</p><div class="info-card"><span class="mono">Looking for longer-term funds?</span><p>Use the private money form for acquisition, rehab, or bridge-capital requests.</p><a href="/private-money-lenders">Go to private money ↗</a></div></aside>
+    <MailtoForm kind="emd">
+      <div class="form-section-title"><span>01</span><h3>Contact & property</h3></div>
+      <div class="field-row"><label>First name<input name="First name" required /></label><label>Last name<input name="Last name" required /></label></div>
+      <div class="field-row"><label>Email<input type="email" name="Email" required /></label><label>Phone<input type="tel" name="Phone" required /></label></div>
+      <label>Community or referral source<input name="Community or referral source" /></label>
+      <label>Full property address<input name="Property address" required /></label>
+      <div class="field-row"><label>Property type<input name="Property type" required /></label><label>Purchase price<input name="Purchase price" required /></label></div>
+      <div class="field-row"><label>As-is value with comps<input name="As-is value" required /></label><label>Amount needed<input name="Amount needed" required /></label></div>
+      <div class="form-section-title"><span>02</span><h3>Transaction</h3></div>
+      <div class="field-row"><label>Funding deadline<input type="date" name="Funding deadline" required /></label><label>Close of escrow<input type="date" name="Close of escrow" required /></label></div>
+      <label>Deal type<select name="Deal type" required><option value="">Select one</option><option>EMD only</option><option>Double close</option><option>Transactional loan (1–7 days)</option><option>Other</option></select></label>
+      <label>Exit strategy<select name="Exit strategy" required><option value="">Select one</option>{exits.map((exit) => <option>{exit}</option>)}</select></label>
+      <label>How and when is the loan repaid?<textarea name="Repayment source" rows="3" required></textarea></label>
+      <label>Title company or closing attorney<input name="Title company / attorney" required /></label>
+      <label>Liens, due diligence, and mutual-release details<textarea name="Deal conditions" rows="4"></textarea></label>
+      <label>Contract and supporting file names<input type="file" name="Supporting files" multiple /></label>
+      <label>Final deal summary<textarea name="Final summary" rows="6" required placeholder="Walk us through the A-B and B-C transaction, timing, fees, and exit."></textarea></label>
+    </MailtoForm>
+  </section>
+</SiteLayout>

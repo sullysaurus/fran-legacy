@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" role="img" aria-labelledby="title">
+  <title id="title">Fran Legacy social avatar</title>
+  <rect width="1080" height="1080" rx="128" fill="#071a2a"/>
+  <circle cx="540" cy="540" r="405" fill="none" stroke="#58cce0" stroke-opacity=".28" stroke-width="3"/>
+  <path d="M345 265h210v90H435v142h158v90H435v228h-90V265Z" fill="none" stroke="#58cce0" stroke-width="26"/>
+  <path d="M620 265h150v550H620V265Zm75 92v366" fill="none" stroke="#58cce0" stroke-width="26"/>
+</svg>

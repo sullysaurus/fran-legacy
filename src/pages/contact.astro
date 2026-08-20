@@ -1,0 +1,23 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import MailtoForm from '../components/MailtoForm.astro';
+const roles = ['Private Money Lender / Partner', 'Interested in becoming a passive lender or partner', 'Seeking private money lending', 'Investor / buyer', 'Wholesaler', 'Funding transactional lending', 'Seeking transactional lending', 'Single-family investor', 'Multifamily / apartment investor', 'Real estate agent', 'Contractor', 'Other'];
+---
+
+<SiteLayout title="Schedule a Consultation" description="Schedule a discovery call with Fran Legacy about creative finance, investment opportunities, wholesale deals, or transactional lending.">
+  <section class="form-page-hero"><p class="eyebrow"><span></span> Start here</p><h1>Bring us the goal, the property, or the <em>question.</em></h1><p>A focused first conversation is often enough to turn uncertainty into a clear next move.</p></section>
+  <section class="form-page-grid">
+    <aside>
+      <p class="section-kicker">Schedule a consultation</p>
+      <h2>Claim your discovery call.</h2>
+      <p>Tell us who you are and what you’re working on. We typically reply within one business day.</p>
+      <div class="contact-details stacked"><a href="tel:+18774501550"><span>Call</span><strong class="contact-value">877 450 1550</strong></a><a href="mailto:tfrancisco@franlegacy.com"><span>Email</span><strong class="contact-value">tfrancisco@franlegacy.com</strong></a><p><span>Visit</span><strong class="contact-value">4208 Six Forks Rd, Suite 1000<br />Raleigh, NC 27609</strong></p></div>
+    </aside>
+    <MailtoForm kind="consultation">
+      <div class="field-row"><label>First name<input name="First name" autocomplete="given-name" required /></label><label>Last name<input name="Last name" autocomplete="family-name" required /></label></div>
+      <div class="field-row"><label>Email<input type="email" name="Email" autocomplete="email" required /></label><label>Phone<input type="tel" name="Phone" autocomplete="tel" required /></label></div>
+      <label>Tell us about yourself<select name="Role" required><option value="">Select the closest fit</option>{roles.map((role) => <option>{role}</option>)}</select></label>
+      <label>What would you like to discuss?<textarea name="Message" rows="6" required placeholder="Share the opportunity, timeline, and what a good outcome looks like."></textarea></label>
+    </MailtoForm>
+  </section>
+</SiteLayout>

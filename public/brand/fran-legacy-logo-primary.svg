@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="520" viewBox="0 0 1600 520" role="img" aria-labelledby="title">
+  <title id="title">Fran Legacy primary logo</title>
+  <rect width="1600" height="520" fill="#fffdf8"/>
+  <g transform="translate(110 95)" fill="none" stroke="#188ca4" stroke-width="18" stroke-linejoin="miter">
+    <path d="M0 0h104v50H52v62h70v50H52v118H0V0Z"/>
+    <path d="M142 0h90v280h-90V0Zm45 50v180"/>
+  </g>
+  <text x="445" y="236" fill="#071a2a" font-family="Georgia, serif" font-size="108" letter-spacing="18">FRAN LEGACY</text>
+  <text x="450" y="310" fill="#188ca4" font-family="Arial, sans-serif" font-size="28" letter-spacing="11">REAL ESTATE · RALEIGH, NC</text>
+</svg>

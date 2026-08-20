@@ -1,0 +1,84 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const path = Astro.url.pathname;
+const nav = [
+  ['/about', 'About'],
+  ['/investments', 'Investments'],
+  ['/private-money-lenders', 'Funding'],
+  ['/contact', 'Contact'],
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#081a2b" />
+    <meta property="og:title" content={`${title} | Fran Legacy`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:image" content="https://franlegacy.com/brand/og-social-share.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://franlegacy.com/brand/og-social-share.png" />
+    <link rel="icon" type="image/png" href="/brand/favicon-512.png" />
+    <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Sans:wdth,wght@75..100,400..700&family=Newsreader:opsz,wght@6..72,400..700&display=swap" rel="stylesheet" />
+    <title>{title} | Fran Legacy</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header inner-header">
+        <a class="brand" href="/" aria-label="Fran Legacy home">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 42 42"><path d="M8 5h12v6h-6v7h8v6h-8v13H8V5Zm15 0h11v32H23V5Zm6 6v20" /></svg></span>
+          <span><strong>FRAN LEGACY</strong><small>Real estate · Raleigh, NC</small></span>
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          {nav.map(([href, label]) => <a href={href} aria-current={path.startsWith(href) ? 'page' : undefined}>{label}</a>)}
+        </nav>
+        <a class="button button-small header-cta" href="/contact">Book a consultation <span>↗</span></a>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle><span></span><span></span></button>
+      </header>
+      <div class="mobile-menu" data-mobile-menu>
+        {nav.map(([href, label]) => <a href={href}>{label}</a>)}
+      </div>
+
+      <main><slot /></main>
+
+      <footer>
+        <a class="brand footer-brand" href="/">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 42 42"><path d="M8 5h12v6h-6v7h8v6h-8v13H8V5Zm15 0h11v32H23V5Zm6 6v20" /></svg></span>
+          <span><strong>FRAN LEGACY</strong><small>Build beyond today.</small></span>
+        </a>
+        <div class="footer-links"><a href="/about">About</a><a href="/investments">Investments</a><a href="/private-money-lenders">Funding</a><a href="/contact">Contact</a><a href="/brand">Brand kit</a></div>
+        <p>© {new Date().getFullYear()} Fran Legacy. <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></p>
+        <p class="disclaimer">Real estate investments involve risk. Information on this site is educational and does not constitute financial, legal, or tax advice. Returns are not guaranteed.</p>
+        <a class="footer-credit" href="https://raleighaiguy.com" target="_blank" rel="noreferrer">Built by Raleigh AI Guy <span>↗</span></a>
+      </footer>
+    </div>
+
+    <script>
+      const menuButton = document.querySelector('[data-menu-toggle]');
+      const mobileMenu = document.querySelector('[data-mobile-menu]');
+      menuButton?.addEventListener('click', () => {
+        const open = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!open));
+        mobileMenu?.classList.toggle('open', !open);
+        document.body.classList.toggle('menu-open', !open);
+      });
+    </script>
+  </body>
+</html>

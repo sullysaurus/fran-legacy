@@ -1,0 +1,93 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+
+const groups = [
+  {
+    name: 'Logo & identity',
+    intro: 'Use the primary mark on light backgrounds, the reversed mark on dark backgrounds, and the avatar where space is limited.',
+    assets: [
+      { title: 'Primary logo', detail: 'SVG · scalable', file: 'fran-legacy-logo-primary.svg', preview: 'light' },
+      { title: 'Primary logo', detail: 'PNG · 1600 × 520', file: 'fran-legacy-logo-primary.png', preview: 'light' },
+      { title: 'Reversed logo', detail: 'SVG · scalable', file: 'fran-legacy-logo-reversed.svg', preview: 'dark' },
+      { title: 'Reversed logo', detail: 'PNG · 1600 × 520', file: 'fran-legacy-logo-reversed.png', preview: 'dark' },
+      { title: 'Profile avatar', detail: 'PNG · 1080 × 1080', file: 'fran-legacy-avatar.png', preview: 'avatar' },
+      { title: 'Profile avatar', detail: 'SVG · scalable', file: 'fran-legacy-avatar.svg', preview: 'avatar' },
+    ],
+  },
+  {
+    name: 'Social posts',
+    intro: 'Ready-to-publish artwork sized for feeds, Stories, Reels, and link previews.',
+    assets: [
+      { title: 'Social share / Open Graph', detail: '1200 × 630', file: 'og-social-share.png' },
+      { title: 'Facebook post', detail: '1200 × 630', file: 'facebook-post.png' },
+      { title: 'LinkedIn post', detail: '1200 × 627', file: 'linkedin-post.png' },
+      { title: 'Instagram portrait', detail: '1080 × 1350', file: 'instagram-portrait.png', preview: 'portrait' },
+      { title: 'Instagram square', detail: '1080 × 1080', file: 'instagram-square.png', preview: 'square' },
+      { title: 'Instagram Story / Reel', detail: '1080 × 1920', file: 'instagram-story.png', preview: 'story' },
+    ],
+  },
+  {
+    name: 'Headers & essentials',
+    intro: 'Platform headers plus practical web and email assets that round out the kit.',
+    assets: [
+      { title: 'Facebook cover', detail: '820 × 312', file: 'facebook-cover.png', preview: 'wide' },
+      { title: 'LinkedIn company cover', detail: '1128 × 191', file: 'linkedin-company-cover.png', preview: 'ultrawide' },
+      { title: 'X header', detail: '1500 × 500', file: 'x-header.png', preview: 'wide' },
+      { title: 'Email header', detail: '1200 × 400', file: 'email-header.png', preview: 'wide' },
+      { title: 'Web app icon', detail: 'PNG · 512 × 512', file: 'favicon-512.png', preview: 'icon' },
+      { title: 'Apple touch icon', detail: 'PNG · 180 × 180', file: 'apple-touch-icon.png', preview: 'icon' },
+    ],
+  },
+];
+---
+
+<SiteLayout title="Brand Kit" description="Download official Fran Legacy logos, social media artwork, platform headers, and web assets.">
+  <section class="brand-kit-hero">
+    <div>
+      <p class="section-kicker light">Official brand resources</p>
+      <h1>Everything Fran Legacy,<br /><em>ready to use.</em></h1>
+      <p>Download individual assets below or grab the complete package. Please preserve the artwork, proportions, colors, and clear space.</p>
+      <a class="button button-light" href="/brand/fran-legacy-brand-kit.zip" download>Download the complete kit <span>↓</span></a>
+    </div>
+    <img src="/brand/fran-legacy-avatar.svg" alt="Fran Legacy FL monogram" width="1080" height="1080" />
+  </section>
+
+  <section class="brand-guidelines" aria-label="Brand guidelines">
+    <div><span class="mono">01 / Navy</span><strong>#071A2A</strong></div>
+    <div><span class="mono">02 / Cyan</span><strong>#58CCE0</strong></div>
+    <div><span class="mono">03 / Paper</span><strong>#F0EDE4</strong></div>
+    <p><span class="mono">Typography</span><strong>Newsreader · Instrument Sans · DM Mono</strong></p>
+  </section>
+
+  <div class="brand-library">
+    {groups.map((group, groupIndex) => (
+      <section class="asset-group">
+        <header>
+          <p class="section-kicker">0{groupIndex + 1} / Downloads</p>
+          <h2>{group.name}</h2>
+          <p>{group.intro}</p>
+        </header>
+        <div class="asset-grid">
+          {group.assets.map((asset) => (
+            <article class="asset-card">
+              <a class:list={['asset-preview', asset.preview]} href={`/brand/${asset.file}`} download aria-label={`Download ${asset.title}`}>
+                <img src={`/brand/${asset.file}`} alt={`${asset.title} preview`} loading="lazy" />
+              </a>
+              <div class="asset-meta">
+                <div><h3>{asset.title}</h3><p>{asset.detail}</p></div>
+                <a href={`/brand/${asset.file}`} download>Download <span>↓</span></a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+
+  <section class="brand-kit-cta">
+    <p class="section-kicker light">One simple download</p>
+    <h2>Take the whole<br /><em>brand with you.</em></h2>
+    <a class="button button-light" href="/brand/fran-legacy-brand-kit.zip" download>Download ZIP <span>↓</span></a>
+    <a class="brand-notes-link" href="/brand/brand-readme.txt" download>Download usage notes</a>
+  </section>
+</SiteLayout>
