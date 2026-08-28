@@ -1,0 +1,132 @@
+---
+import { getCollection } from 'astro:content';
+import queue from '../../../../seo/keyword-seeds.json';
+import { formatPublicationDate, isPublished, publicationAsOfDate } from '../../../lib/publishing';
+
+const posts = (await getCollection('blog')).sort((a, b) => a.data.plannedPublishDate.getTime() - b.data.plannedPublishDate.getTime());
+const queueBySlug = new Map(queue.map((item) => [item.slug, item]));
+const rows = posts.map((post) => ({ post, queue: queueBySlug.get(post.id), live: isPublished(post.data.plannedPublishDate) }));
+const liveCount = rows.filter((row) => row.live).length;
+const scheduledCount = rows.length - liveCount;
+const nextPost = rows.find((row) => !row.live)?.post;
+const clusterCounts = [...new Set(rows.map((row) => row.post.data.cluster))].map((cluster) => ({ cluster, count: rows.filter((row) => row.post.data.cluster === cluster).length }));
+const totalVolume = queue.reduce((sum, item) => sum + (item.volume ?? 0), 0);
+const dateValue = (value: Date) => value.toISOString().slice(0, 10);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="description" content="Fran Legacy staged blog publishing calendar." />
+    <meta name="theme-color" content="#071a2a" />
+    <link rel="icon" type="image/png" href="/brand/favicon-512.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Sans:wdth,wght@75..100,400..700&family=Newsreader:opsz,wght@6..72,400..700&display=swap" rel="stylesheet" />
+    <title>Content Admin | Fran Legacy</title>
+  </head>
+  <body>
+    <header class="admin-header">
+      <a class="brand" href="/"><span class="brand-mark"><svg viewBox="0 0 42 42"><path d="M8 5h12v6h-6v7h8v6h-8v13H8V5Zm15 0h11v32H23V5Zm6 6v20" /></svg></span><span><strong>FRAN LEGACY</strong><small>Content admin</small></span></a>
+      <nav><a href="/blog">Public blog ↗</a><a href="/seo-dashboard">SEO dashboard ↗</a></nav>
+      <div class="automation-state"><i></i><span>Automatic publishing</span><strong>Active</strong></div>
+    </header>
+
+    <main>
+      <section class="title-row">
+        <div><p>Publishing operations</p><h1>Content calendar</h1><span>Build date {publicationAsOfDate} · America/New_York</span></div>
+        <div class="schedule-message"><strong>{scheduledCount} posts are already scheduled.</strong><span>No uploads or manual release steps are required.</span></div>
+      </section>
+
+      <section class="summary-grid">
+        <article><span>Total articles</span><strong>{rows.length}</strong><small>complete and staged</small></article>
+        <article><span>Scheduled</span><strong>{scheduledCount}</strong><small>future releases</small></article>
+        <article><span>Live</span><strong>{liveCount}</strong><small>public blog articles</small></article>
+        <article><span>Next release</span><strong class="date-metric">{nextPost ? formatPublicationDate(nextPost.data.plannedPublishDate, false) : 'Complete'}</strong><small>Tuesday / Thursday cadence</small></article>
+        <article><span>Modeled demand</span><strong>{new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 }).format(totalVolume)}</strong><small>monthly searches</small></article>
+      </section>
+
+      <section class="panel">
+        <header class="panel-heading">
+          <div><p>All staged content</p><h2>50-post release queue</h2></div>
+          <span>Sep 2026 – Feb 2027</span>
+        </header>
+        <div class="controls">
+          <label><span>Search</span><input type="search" placeholder="Title or keyword" data-search /></label>
+          <div class="filter-set" role="group" aria-label="Filter by topic"><button class="active" type="button" data-cluster="all">All <b>{rows.length}</b></button>{clusterCounts.map((item) => <button type="button" data-cluster={item.cluster}>{item.cluster} <b>{item.count}</b></button>)}</div>
+          <label><span>Status</span><select data-status><option value="all">All</option><option value="scheduled">Scheduled</option><option value="live">Live</option></select></label>
+        </div>
+        <div class="result-row"><span><strong data-count>{rows.length}</strong> articles shown</span><span>Click preview to read the complete staged article</span></div>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>#</th><th>Article</th><th>Topic</th><th>Keyword data</th><th>Release</th><th>Status</th><th></th></tr></thead>
+            <tbody>
+              {rows.map(({ post, queue: item, live }, index) => (
+                <tr data-row data-cluster={post.data.cluster} data-status={live ? 'live' : 'scheduled'} data-search={`${post.data.title} ${post.data.targetKeyword}`.toLowerCase()}>
+                  <td><span class="row-number">{String(index + 1).padStart(2, '0')}</span></td>
+                  <td><strong>{post.data.title}</strong><small>{post.data.targetKeyword}</small></td>
+                  <td><span class="topic-pill">{post.data.cluster}</span></td>
+                  <td><strong class="volume">{item?.volume === null ? '—' : new Intl.NumberFormat('en-US').format(item?.volume ?? 0)}</strong><small>{item?.priority ?? '—'} priority</small></td>
+                  <td><strong>{formatPublicationDate(post.data.plannedPublishDate, false)}</strong><small>{dateValue(post.data.plannedPublishDate)}</small></td>
+                  <td><span class:list={['status-pill', live ? 'live' : 'scheduled']}><i></i>{live ? 'Live' : 'Scheduled'}</span></td>
+                  <td><a class="preview-link" href={`/admin/content/${post.id}/`}>Preview ↗</a>{live && <a class="public-link" href={`/blog/${post.id}/`}>Public ↗</a>}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <aside class="system-note"><div><i></i><strong>How automatic publishing works</strong></div><p>The repository rebuilds every Tuesday and Thursday. At each build, Astro releases articles whose scheduled date has arrived, adds them to the public blog, and includes only live URLs in the sitemap.</p><span>This route is intentionally unprotected for the demo and excluded from search indexing.</span></aside>
+    </main>
+
+    <script>
+      const search = document.querySelector('[data-search]');
+      const status = document.querySelector('[data-status]');
+      const buttons = [...document.querySelectorAll('[data-cluster]')];
+      const rows = [...document.querySelectorAll('[data-row]')];
+      const count = document.querySelector('[data-count]');
+      let cluster = 'all';
+      const update = () => {
+        const term = search?.value.trim().toLowerCase() ?? '';
+        const selectedStatus = status?.value ?? 'all';
+        let visible = 0;
+        rows.forEach((row) => {
+          const matches = (cluster === 'all' || row.getAttribute('data-cluster') === cluster)
+            && (selectedStatus === 'all' || row.getAttribute('data-status') === selectedStatus)
+            && (!term || row.getAttribute('data-search')?.includes(term));
+          row.hidden = !matches;
+          if (matches) visible += 1;
+        });
+        if (count) count.textContent = String(visible);
+      };
+      search?.addEventListener('input', update);
+      status?.addEventListener('change', update);
+      buttons.forEach((button) => button.addEventListener('click', () => {
+        cluster = button.getAttribute('data-cluster') ?? 'all';
+        buttons.forEach((item) => item.classList.toggle('active', item === button));
+        update();
+      }));
+    </script>
+  </body>
+</html>
+
+<style>
+  :root { --ink:#071a2a; --blue:#188ca4; --cyan:#58cce0; --paper:#f3f4f2; --white:#fff; --line:#d9dedf; --muted:#677781; --serif:'Newsreader',serif; --sans:'Instrument Sans',sans-serif; --mono:'DM Mono',monospace; }
+  * { box-sizing:border-box; } body { margin:0; color:var(--ink); background:var(--paper); font-family:var(--sans); } a { color:inherit; text-decoration:none; } button,input,select { font:inherit; }
+  .admin-header { position:sticky; z-index:10; top:0; min-height:72px; display:grid; grid-template-columns:1fr auto 1fr; gap:28px; align-items:center; padding:0 30px; color:#fff; background:var(--ink); border-bottom:1px solid rgba(255,255,255,.12); }
+  .brand { display:inline-flex; align-items:center; gap:11px; width:fit-content; }.brand-mark{width:38px;height:38px;color:var(--cyan)}.brand-mark svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:2.2}.brand strong,.brand small{display:block}.brand strong{font-size:12px;letter-spacing:.16em}.brand small{margin-top:3px;color:rgba(255,255,255,.5);font:8px var(--mono);text-transform:uppercase;letter-spacing:.12em}
+  .admin-header nav{display:flex;gap:7px}.admin-header nav a{padding:9px 11px;color:rgba(255,255,255,.66);border-radius:4px;font-size:11px}.admin-header nav a:hover{color:#fff;background:rgba(255,255,255,.08)}
+  .automation-state{justify-self:end;display:grid;grid-template-columns:auto auto;column-gap:9px;align-items:center;text-align:right}.automation-state i{grid-row:1/3;width:8px;height:8px;border-radius:50%;background:#62d99a;box-shadow:0 0 0 5px rgba(98,217,154,.12)}.automation-state span,.automation-state strong{display:block}.automation-state span{font:8px var(--mono);color:rgba(255,255,255,.5);text-transform:uppercase}.automation-state strong{font-size:12px}
+  main{width:min(100%,1680px);margin:0 auto;padding:28px 30px 48px}.title-row{display:flex;justify-content:space-between;gap:50px;align-items:end;padding:22px 0 28px}.title-row p,.panel-heading p{margin:0 0 4px;color:var(--blue);font:8px var(--mono);letter-spacing:.12em;text-transform:uppercase}.title-row h1{margin:0;font:600 40px/1 var(--serif);letter-spacing:-.03em}.title-row>div>span{display:block;margin-top:9px;color:var(--muted);font-size:11px}.schedule-message{min-width:390px;padding:17px 20px;border-left:3px solid #62d99a;background:#fff}.schedule-message strong,.schedule-message span{display:block}.schedule-message strong{font:600 17px var(--serif)}.schedule-message span{margin-top:4px;color:var(--muted);font-size:11px}
+  .summary-grid{display:grid;grid-template-columns:repeat(5,1fr);margin-bottom:22px;border:1px solid var(--line);background:#fff}.summary-grid article{min-width:0;padding:20px 22px;border-right:1px solid var(--line)}.summary-grid article:last-child{border:0}.summary-grid span,.summary-grid small{display:block}.summary-grid span{font:8px var(--mono);color:var(--muted);text-transform:uppercase}.summary-grid strong{display:block;margin:12px 0 5px;font:600 32px/1 var(--serif)}.summary-grid .date-metric{font-size:25px}.summary-grid small{color:var(--muted);font-size:10px}
+  .panel{overflow:hidden;border:1px solid var(--line);background:#fff}.panel-heading{display:flex;justify-content:space-between;align-items:end;padding:18px 20px;border-bottom:1px solid var(--line)}.panel-heading h2{margin:0;font:600 24px var(--serif)}.panel-heading>span{color:var(--muted);font:8px var(--mono);text-transform:uppercase}
+  .controls{display:grid;grid-template-columns:minmax(210px,.7fr) 2fr minmax(140px,.35fr);gap:18px;align-items:end;padding:16px 20px;border-bottom:1px solid var(--line);background:#f8f9f8}.controls label{display:grid;gap:6px}.controls label>span{font:8px var(--mono);color:var(--muted);text-transform:uppercase}.controls input,.controls select{width:100%;min-height:38px;padding:8px 10px;color:var(--ink);border:1px solid #cbd2d4;border-radius:3px;background:#fff}.filter-set{display:flex;flex-wrap:wrap;gap:6px}.filter-set button{min-height:38px;padding:7px 10px;color:#51616a;border:1px solid #cbd2d4;border-radius:3px;background:#fff;font-size:9px;cursor:pointer}.filter-set button b{margin-left:5px;color:#8b989e}.filter-set button.active{color:#fff;border-color:var(--ink);background:var(--ink)}.filter-set button.active b{color:rgba(255,255,255,.55)}
+  .result-row{display:flex;justify-content:space-between;padding:10px 20px;color:var(--muted);border-bottom:1px solid var(--line);font:8px var(--mono);text-transform:uppercase}.result-row strong{color:var(--ink)}.table-scroll{overflow-x:auto}table{width:100%;min-width:1080px;border-collapse:collapse;text-align:left}th{padding:10px 12px;color:#718088;background:#f4f6f5;border-bottom:1px solid var(--line);font:8px var(--mono);text-transform:uppercase}td{padding:13px 12px;border-bottom:1px solid #e7eaea;vertical-align:middle;font-size:11px}tbody tr:hover{background:#f9fbfa}tr[hidden]{display:none}.row-number{color:#89959b;font:9px var(--mono)}td>strong,td>small{display:block}td>small{margin-top:4px;color:var(--muted);font-size:9px}.topic-pill,.status-pill{display:inline-flex;align-items:center;padding:6px 8px;border-radius:999px;font-size:9px}.topic-pill{color:#30515f;background:#eaf1f2}.status-pill{gap:6px}.status-pill i{width:6px;height:6px;border-radius:50%}.status-pill.scheduled{color:#80581c;background:#fbf1dc}.status-pill.scheduled i{background:#dc9d34}.status-pill.live{color:#1f6a48;background:#e3f4eb}.status-pill.live i{background:#3db47a}.volume{font:600 18px var(--serif)}.preview-link,.public-link{display:block;width:max-content;padding-bottom:3px;color:var(--blue);border-bottom:1px solid rgba(24,140,164,.35);font:600 8px var(--mono);text-transform:uppercase}.public-link{margin-top:7px;color:#397657;border-color:rgba(57,118,87,.35)}
+  .system-note{display:grid;grid-template-columns:.55fr 1.7fr .7fr;gap:34px;margin-top:20px;padding:20px;border:1px solid var(--line);background:#edf1ef}.system-note div{display:flex;gap:10px;align-items:center}.system-note i{width:8px;height:8px;border-radius:50%;background:#62d99a}.system-note strong{font:600 15px var(--serif)}.system-note p,.system-note span{margin:0;color:var(--muted);font-size:10px;line-height:1.55}.system-note span{font:8px var(--mono);text-transform:uppercase}
+  @media(max-width:1100px){.admin-header{grid-template-columns:1fr auto}.admin-header nav{display:none}.summary-grid{grid-template-columns:repeat(3,1fr)}.summary-grid article:nth-child(3){border-right:0}.controls{grid-template-columns:1fr}.system-note{grid-template-columns:1fr 2fr}.system-note>span{grid-column:1/-1}}
+  @media(max-width:680px){.admin-header{padding:0 15px}.automation-state span{display:none}main{padding:18px 14px 35px}.title-row{align-items:stretch;flex-direction:column;gap:22px}.schedule-message{min-width:0}.summary-grid{grid-template-columns:1fr 1fr}.summary-grid article:nth-child(n){border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.summary-grid article:nth-child(2n){border-right:0}.summary-grid article:last-child{grid-column:1/-1;border-bottom:0}.panel-heading{align-items:flex-start;flex-direction:column;gap:7px}.result-row{gap:20px}.result-row span:last-child{display:none}.system-note{grid-template-columns:1fr}}
+</style>

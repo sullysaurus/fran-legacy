@@ -1,0 +1,36 @@
+---
+import { getCollection, render } from 'astro:content';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import { formatPublicationDate, isPublished } from '../../../lib/publishing';
+
+export async function getStaticPaths() {
+  return (await getCollection('blog')).map((article) => ({ params: { slug: article.id }, props: { article } }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+const live = isPublished(article.data.plannedPublishDate);
+---
+
+<SiteLayout title={`Preview: ${article.data.title}`} description={article.data.description} robots="noindex,nofollow">
+  <div class="preview-bar"><div><i></i><strong>{live ? 'Live article' : 'Scheduled preview'}</strong><span>{live ? 'This article is public.' : `Automatic release: ${formatPublicationDate(article.data.plannedPublishDate)}`}</span></div><nav><a href="/admin/content">← Content calendar</a>{live && <a href={`/blog/${article.id}/`}>Open public URL ↗</a>}</nav></div>
+  <article class="preview-article">
+    <header>
+      <p>{article.data.cluster} · {article.data.intent} · {article.data.funnel}</p>
+      <h1>{article.data.title}</h1>
+      <div><span>Target: {article.data.targetKeyword}</span><span>Release: {formatPublicationDate(article.data.plannedPublishDate)}</span><span>{article.data.volume === null ? 'Volume not queried' : `${article.data.volume.toLocaleString('en-US')} searches / month`}</span></div>
+    </header>
+    <div class="preview-layout">
+      <aside><span>Article controls</span><strong>{live ? 'Published' : 'Scheduled'}</strong><p>This page is the complete pre-publication preview. The article remains editable in the repository until its release date.</p><a href={article.data.ctaHref}>Test CTA: {article.data.ctaLabel} ↗</a></aside>
+      <div class="article-prose"><Content /></div>
+    </div>
+  </article>
+</SiteLayout>
+
+<style>
+  .preview-bar{position:relative;z-index:5;display:flex;justify-content:space-between;gap:30px;align-items:center;padding:14px clamp(24px,5vw,80px);color:#fff;background:#174154;border-bottom:1px solid rgba(255,255,255,.18)}.preview-bar>div{display:flex;align-items:center;gap:10px}.preview-bar i{width:8px;height:8px;border-radius:50%;background:#e2ad4f}.preview-bar strong{font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.08em}.preview-bar span{color:rgba(255,255,255,.6);font-size:11px}.preview-bar nav{display:flex;gap:22px}.preview-bar a{padding-bottom:3px;border-bottom:1px solid rgba(255,255,255,.38);font:500 9px var(--mono);text-transform:uppercase;letter-spacing:.08em}
+  .preview-article>header{padding:150px clamp(24px,8vw,132px) 82px;color:#fff;background:radial-gradient(circle at 84% 22%,rgba(88,204,224,.2),transparent 22%),var(--ink)}.preview-article>header p{color:var(--blue);font:500 9px var(--mono);letter-spacing:.14em;text-transform:uppercase}.preview-article>header h1{max-width:1080px;margin:18px 0 48px;font-size:clamp(56px,7vw,104px)}.preview-article>header>div{display:flex;flex-wrap:wrap;gap:12px 35px;padding-top:23px;border-top:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.55);font:9px var(--mono);text-transform:uppercase;letter-spacing:.08em}
+  .preview-layout{display:grid;grid-template-columns:minmax(210px,.55fr) minmax(0,1.45fr);gap:clamp(60px,10vw,150px);max-width:1380px;margin:0 auto;padding:110px clamp(24px,7vw,100px) 140px}.preview-layout aside{position:sticky;top:40px;align-self:start;padding:22px;border:1px solid var(--line);background:var(--white)}.preview-layout aside span{font:500 8px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--blue-deep)}.preview-layout aside strong{display:block;margin:17px 0;font:500 29px var(--serif)}.preview-layout aside p{color:rgba(7,26,42,.58);font-size:13px;line-height:1.65}.preview-layout aside a{display:inline-block;margin-top:14px;padding-bottom:5px;color:var(--blue-deep);border-bottom:1px solid currentColor;font:600 8px var(--mono);letter-spacing:.09em;text-transform:uppercase}.article-prose{max-width:780px}.article-prose :global(h2){margin:64px 0 18px;font:500 clamp(36px,4vw,54px)/1.05 var(--serif);letter-spacing:-.03em}.article-prose :global(h2:first-child){margin-top:0}.article-prose :global(h3){margin:42px 0 13px;font:500 27px/1.15 var(--serif)}.article-prose :global(p),.article-prose :global(li){color:rgba(7,26,42,.72);font-size:17px;line-height:1.78}.article-prose :global(ol),.article-prose :global(ul){padding-left:24px}.article-prose :global(li){margin:12px 0;padding-left:7px}.article-prose :global(a){color:var(--blue-deep);border-bottom:1px solid currentColor}
+  @media(max-width:800px){.preview-bar{align-items:flex-start;flex-direction:column}.preview-bar nav{width:100%;justify-content:space-between}.preview-layout{grid-template-columns:1fr}.preview-layout aside{position:static}}
+  @media(max-width:680px){.preview-bar span{display:none}.preview-article>header{padding-top:120px;padding-bottom:60px}.preview-article>header h1{font-size:clamp(52px,15vw,72px)}.preview-layout{padding-top:70px;padding-bottom:90px}}
+</style>

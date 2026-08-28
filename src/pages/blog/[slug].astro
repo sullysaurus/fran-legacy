@@ -1,0 +1,62 @@
+---
+import { getCollection, render } from 'astro:content';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { dateKey, formatPublicationDate, isPublished } from '../../lib/publishing';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('blog');
+  return articles
+    .filter((article) => isPublished(article.data.plannedPublishDate))
+    .map((article) => ({ params: { slug: article.id }, props: { article } }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+---
+
+<SiteLayout title={article.data.title} description={article.data.description} ogType="article" publishedTime={`${dateKey(article.data.plannedPublishDate)}T09:00:00-04:00`}>
+  <article class="blog-article">
+    <header class="article-hero">
+      <div class="article-hero-inner">
+        <a class="back-link" href="/blog">← Field notes</a>
+        <p>{article.data.cluster} · {article.data.intent}</p>
+        <h1>{article.data.title}</h1>
+        <div class="article-byline"><span>Fran Legacy research desk</span><span>Published {formatPublicationDate(article.data.plannedPublishDate)}</span><span>{article.data.funnel}</span></div>
+      </div>
+    </header>
+    <div class="article-layout">
+      <aside>
+        <span>In this field note</span>
+        <strong>{article.data.targetKeyword}</strong>
+        <p>Educational information for real estate investors and dealmakers. Deal documents and qualified professionals control transaction-specific decisions.</p>
+        <a href={article.data.ctaHref}>{article.data.ctaLabel} ↗</a>
+      </aside>
+      <div class="article-prose"><Content /></div>
+    </div>
+  </article>
+</SiteLayout>
+
+<style>
+  .article-hero { padding: 190px clamp(24px, 8vw, 132px) 90px; color: var(--white); background: radial-gradient(circle at 84% 24%, rgba(88,204,224,.18), transparent 22%), var(--ink); }
+  .article-hero-inner { max-width: 1120px; }
+  .back-link { display: inline-block; margin-bottom: 70px; color: rgba(255,255,255,.62); font: 500 9px var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+  .article-hero p { color: var(--blue); font: 500 9px var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+  .article-hero h1 { max-width: 1080px; margin: 18px 0 48px; font-size: clamp(56px, 7vw, 104px); }
+  .article-byline { display: flex; flex-wrap: wrap; gap: 12px 36px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.18); color: rgba(255,255,255,.55); font: 9px var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+  .article-layout { display: grid; grid-template-columns: minmax(210px, .55fr) minmax(0, 1.45fr); gap: clamp(60px, 10vw, 150px); max-width: 1380px; margin: 0 auto; padding: 110px clamp(24px, 7vw, 100px) 140px; }
+  .article-layout aside { position: sticky; top: 40px; align-self: start; padding-top: 20px; border-top: 1px solid var(--ink); }
+  .article-layout aside span { font: 500 9px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--blue-deep); }
+  .article-layout aside strong { display: block; margin: 18px 0; font: 500 28px/1.1 var(--serif); }
+  .article-layout aside p { color: rgba(7,26,42,.58); font-size: 13px; line-height: 1.65; }
+  .article-layout aside a { display: inline-block; margin-top: 16px; padding-bottom: 5px; border-bottom: 1px solid var(--blue-deep); font: 600 9px var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+  .article-prose { max-width: 780px; }
+  .article-prose :global(h2) { margin: 64px 0 18px; font: 500 clamp(36px, 4vw, 54px)/1.05 var(--serif); letter-spacing: -.03em; }
+  .article-prose :global(h2:first-child) { margin-top: 0; }
+  .article-prose :global(h3) { margin: 42px 0 13px; font: 500 27px/1.15 var(--serif); }
+  .article-prose :global(p), .article-prose :global(li) { color: rgba(7,26,42,.72); font-size: 17px; line-height: 1.78; }
+  .article-prose :global(ol), .article-prose :global(ul) { padding-left: 24px; }
+  .article-prose :global(li) { margin: 12px 0; padding-left: 7px; }
+  .article-prose :global(a) { color: var(--blue-deep); border-bottom: 1px solid currentColor; }
+  @media (max-width: 800px) { .article-layout { grid-template-columns: 1fr; } .article-layout aside { position: static; } }
+  @media (max-width: 680px) { .article-hero { padding-top: 160px; padding-bottom: 65px; } .back-link { margin-bottom: 48px; } .article-hero h1 { font-size: clamp(52px, 15vw, 72px); } .article-layout { padding-top: 70px; padding-bottom: 90px; } }
+</style>

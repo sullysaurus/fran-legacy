@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /seo-dashboard/
+
+Sitemap: https://www.franlegacy.com/sitemap-index.xml

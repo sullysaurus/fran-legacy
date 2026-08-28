@@ -9,6 +9,7 @@
     "preview": "astro preview",
     "content:generate": "node scripts/generate-seo-content.mjs",
     "content:check": "node scripts/validate-content-engine.mjs",
+    "content:release-check": "node scripts/check-scheduled-release.mjs",
     "test:seo": "node scripts/validate-content-engine.mjs"
   },
   "dependencies": {

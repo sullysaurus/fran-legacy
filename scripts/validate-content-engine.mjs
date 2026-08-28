@@ -34,35 +34,36 @@ const commercialKeywords = new Set(competitors.commercialOpportunities.map((item
 for (const item of queue) {
   if (commercialKeywords.has(item.keyword.toLowerCase())) failures.push(`Commercial keyword incorrectly assigned to a blog post: ${item.keyword}`);
   if (item.pageType !== 'article') failures.push(`Unexpected page type for ${item.slug}.`);
-  if (item.status !== 'Drafted') failures.push(`Queue item is not drafted: ${item.slug}.`);
+  if (item.status !== 'Scheduled') failures.push(`Queue item is not scheduled: ${item.slug}.`);
   if (!variations[item.keyword]) failures.push(`Missing variation-map owner for ${item.keyword}.`);
   if (variations[item.keyword]?.ownerUrl !== item.ownerUrl) failures.push(`Variation-map owner mismatch for ${item.keyword}.`);
 }
 
 const blogDirectory = path.join(root, config.content.directory);
 const files = (await readdir(blogDirectory)).filter((file) => file.endsWith('.md'));
-if (files.length !== 50) failures.push(`Expected 50 Markdown drafts, found ${files.length}.`);
+if (files.length !== 50) failures.push(`Expected 50 Markdown articles, found ${files.length}.`);
 
 for (const item of queue) {
   const filename = `${item.slug}.md`;
   if (!files.includes(filename)) {
-    failures.push(`Missing draft: ${filename}`);
+    failures.push(`Missing article: ${filename}`);
     continue;
   }
   const content = await readFile(path.join(blogDirectory, filename), 'utf8');
   const body = content.replace(/^---[\s\S]*?---\s*/, '');
   const words = body.match(/\b[\w’'-]+\b/g)?.length ?? 0;
-  if (words < 500) failures.push(`Draft too short (${words} words): ${filename}`);
-  if (!/draft:\s*true/.test(content)) failures.push(`Draft flag missing: ${filename}`);
-  if (!/reviewRequired:\s*true/.test(content)) failures.push(`Human-review flag missing: ${filename}`);
+  if (words < 500) failures.push(`Article too short (${words} words): ${filename}`);
+  if (!/status:\s*["']scheduled["']/.test(content)) failures.push(`Scheduled status missing: ${filename}`);
+  if (!/draft:\s*false/.test(content)) failures.push(`Publishable flag missing: ${filename}`);
+  if (!/reviewRequired:\s*false/.test(content)) failures.push(`Review state is not cleared: ${filename}`);
   if (!content.includes(`targetKeyword: ${JSON.stringify(item.keyword)}`)) failures.push(`Target keyword mismatch: ${filename}`);
-  if (!content.includes('Editorial status:')) failures.push(`Editorial warning missing: ${filename}`);
+  if (/Editorial status:|Complete working draft|Keep unpublished/.test(content)) failures.push(`Draft-only copy remains: ${filename}`);
   if (/guaranteed funding|guaranteed return|will get you funded|nationwide lending/i.test(body)) failures.push(`Unsupported promise detected: ${filename}`);
 }
 
 for (const item of Object.values(state)) {
   if (!queue.some((queued) => queued.slug === item.slug)) failures.push(`State without queue item: ${item.slug}.`);
-  if (item.status !== 'drafted' || item.approvedAt || item.publishedAt || item.verifiedLiveAt) failures.push(`Unsafe publication state for ${item.slug}.`);
+  if (item.status !== 'scheduled' || !item.scheduledAt || item.publishedAt || item.verifiedLiveAt) failures.push(`Invalid scheduled publication state for ${item.slug}.`);
 }
 
 if (failures.length) {
@@ -73,5 +74,5 @@ if (failures.length) {
 const measured = queue.filter((item) => typeof item.volume === 'number').length;
 const unmeasured = queue.length - measured;
 const dateRange = `${queue[0].plannedPublishDate} to ${queue.at(-1).plannedPublishDate}`;
-console.log(`SEO content engine valid: 50 drafted, 0 published, ${measured} measured, ${unmeasured} retained for business fit.`);
-console.log(`Recommended twice-weekly review calendar: ${dateRange}. Commercial intent remains outside the blog queue.`);
+console.log(`SEO content engine valid: 50 scheduled, 0 live as of the current build, ${measured} measured, ${unmeasured} retained for business fit.`);
+console.log(`Automated twice-weekly publication calendar: ${dateRange}. Commercial intent remains outside the blog queue.`);

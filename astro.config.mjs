@@ -2,6 +2,6 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://franlegacy.netlify.app',
-  integrations: [sitemap({ filter: (page) => !page.endsWith('/seo-dashboard/') })],
+  site: 'https://www.franlegacy.com',
+  integrations: [sitemap({ filter: (page) => !page.includes('/admin/') && !page.endsWith('/seo-dashboard/') })],
 });

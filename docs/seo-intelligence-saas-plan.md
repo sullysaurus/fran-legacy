@@ -24,6 +24,7 @@ Do not begin with a large recurring product. Validate willingness to pay with a 
 | Free Search Signal Scan | $0 | One domain, two competitors, baseline status, three gaps, and three article ideas | Lead generation and product education |
 | Opportunity Map | $249 one time | Full competitor snapshot, up to 50 keyword opportunities, intent clusters, and downloadable report | Tests self-serve willingness to pay |
 | Content Blueprint | $1,500 one time | Opportunity Map plus page ownership, 50 briefs, editorial order, and claim-review checklist | Productized strategy service |
+| Custom SEO Dashboard | $3,500 one time | Live domain and competitor research, keyword gaps, commercial-page opportunities, 50 prioritized ideas, and a strategy walkthrough | Lower-risk sales-led entry point; credit the fee toward implementation for 30 days |
 | White-glove Content Engine | $10,000–$15,000 setup | Custom dashboard, 50 drafts, repository/CMS implementation, validation, and measurement plan | High-value sales-led implementation |
 | Managed Search Equity | $1,500–$3,500/month | Research refreshes, publishing, optimization, reporting, and new content | Recurring service after implementation |
 

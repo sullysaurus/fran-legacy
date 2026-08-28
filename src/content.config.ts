@@ -19,8 +19,8 @@ const blog = defineCollection({
     cpc: z.number().nonnegative().nullable(),
     competition: z.number().min(0).max(1).nullable(),
     researchSource: z.string(),
-    status: z.literal('drafted'),
-    draft: z.literal(true),
+    status: z.enum(['scheduled', 'published']),
+    draft: z.literal(false),
     reviewRequired: z.boolean(),
   }),
 });

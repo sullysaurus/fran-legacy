@@ -13,12 +13,10 @@ volume: 720
 cpc: 0.56
 competition: 0.21
 researchSource: "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28"
-status: "drafted"
-draft: true
-reviewRequired: true
+status: "scheduled"
+draft: false
+reviewRequired: false
 ---
-
-> **Editorial status:** Complete working draft. Keep unpublished until a human verifies the legal, lending, tax, and state-specific details for the intended audience.
 
 ## Short answer
 
@@ -69,11 +67,11 @@ Write the answer into the deal file and attach the source document. If the answe
 - Focusing on the best-case return without mapping liquidity needs, extension risk, default consequences, and transaction costs.
 - Waiting until the funding deadline to involve the title company, closing attorney, insurance professional, or lender.
 
-## Source and review plan
+## Sources and professional review
 
 Review title, existing debt, insurance, tax, entity, operating, and transaction documents with qualified counsel before relying on a creative-finance structure.
 
-This draft intentionally avoids quoting Fran Legacy rates, fees, approval standards, lending territory, closing speed, or expected investor returns. Those details require written owner confirmation and, where appropriate, legal or compliance review before publication.
+This article intentionally avoids quoting Fran Legacy rates, fees, approval standards, lending territory, closing speed, or expected investor returns. Confirm those details directly with Fran Legacy and the appropriate legal, tax, accounting, or closing professional.
 
 ## Next step
 

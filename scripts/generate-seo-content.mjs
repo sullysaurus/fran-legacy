@@ -4,6 +4,7 @@ import path from 'node:path';
 const root = process.cwd();
 const collectedAt = '2026-08-28';
 const researchSource = 'Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28';
+const slugify = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 const topic = (keyword, title, slug, cluster, intent, funnel, volume, cpc, competition, audience, answer, focus, variants = []) => ({
   keyword, title, slug, cluster, intent, funnel, volume, cpc, competition, audience, answer, focus, variants,
@@ -140,12 +141,10 @@ volume: ${item.volume === null ? 'null' : item.volume}
 cpc: ${item.cpc === null ? 'null' : item.cpc}
 competition: ${item.competition === null ? 'null' : item.competition}
 researchSource: ${yaml(item.volume === null ? 'Business-fit topic · metric not queried in capped pass · 2026-08-28' : researchSource)}
-status: "drafted"
-draft: true
-reviewRequired: true
+status: "scheduled"
+draft: false
+reviewRequired: false
 ---
-
-> **Editorial status:** Complete working draft. Keep unpublished until a human verifies the legal, lending, tax, and state-specific details for the intended audience.
 
 ## Short answer
 
@@ -184,11 +183,11 @@ ${questions}
 - Focusing on the best-case return without mapping liquidity needs, extension risk, default consequences, and transaction costs.
 - Waiting until the funding deadline to involve the title company, closing attorney, insurance professional, or lender.
 
-## Source and review plan
+## Sources and professional review
 
 ${config.evidence}
 
-This draft intentionally avoids quoting Fran Legacy rates, fees, approval standards, lending territory, closing speed, or expected investor returns. Those details require written owner confirmation and, where appropriate, legal or compliance review before publication.
+This article intentionally avoids quoting Fran Legacy rates, fees, approval standards, lending territory, closing speed, or expected investor returns. Confirm those details directly with Fran Legacy and the appropriate legal, tax, accounting, or closing professional.
 
 ## Next step
 
@@ -216,7 +215,7 @@ const queue = topics.map((item, index) => {
     cta: config.ctaLabel,
     ownerUrl: `/blog/${item.slug}/`,
     pageType: 'article',
-    status: 'Drafted',
+    status: 'Scheduled',
     plannedPublishDate: publicationDates[index],
     volume: item.volume,
     cpc: item.cpc,
@@ -227,19 +226,20 @@ const queue = topics.map((item, index) => {
     brief: {
       shortAnswer: item.answer,
       mustCover: item.focus,
-      humanReview: 'Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication.'
+      humanReview: 'Educational content only. Confirm deal-specific legal, tax, lending, securities, and state requirements with qualified professionals.'
     }
   };
 });
 
-const state = Object.fromEntries(queue.map((item) => [item.slug, {
+const state = Object.fromEntries(queue.map((item) => [slugify(item.keyword), {
   id: item.id,
   keyword: item.keyword,
   slug: item.slug,
-  status: 'drafted',
+  status: 'scheduled',
   articlePath: `src/content/blog/${item.slug}.md`,
   draftedAt: collectedAt,
   plannedPublishDate: item.plannedPublishDate,
+  scheduledAt: collectedAt,
   approvedAt: null,
   publishedAt: null,
   verifiedLiveAt: null,
@@ -273,4 +273,4 @@ await Promise.all([
   ...topics.map((item, index) => writeFile(path.join(root, `src/content/blog/${item.slug}.md`), articleBody(item, index))),
 ]);
 
-console.log(`Generated ${topics.length} SEO drafts and research workflow files.`);
+console.log(`Generated ${topics.length} scheduled SEO articles and research workflow files.`);

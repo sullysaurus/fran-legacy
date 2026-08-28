@@ -51,10 +51,11 @@
     }
   },
   "publishing": {
-    "cadence": "twice weekly after human approval",
+    "cadence": "twice weekly on Tuesday and Thursday",
     "timezone": "America/New_York",
     "dateField": "plannedPublishDate",
-    "releaseMechanism": "draft-only; no automatic publishing configured"
+    "releaseMechanism": "GitHub Actions scheduled rebuild on Tuesday and Thursday; Astro exposes only articles whose planned publication date has arrived",
+    "automationFile": ".github/workflows/publish-scheduled-content.yml"
   },
   "research": {
     "country": "United States",

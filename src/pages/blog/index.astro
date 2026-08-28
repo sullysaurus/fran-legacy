@@ -1,0 +1,124 @@
+---
+import { getCollection } from 'astro:content';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { formatPublicationDate, isPublished } from '../../lib/publishing';
+
+const articles = (await getCollection('blog')).sort((a, b) => b.data.plannedPublishDate.getTime() - a.data.plannedPublishDate.getTime());
+const liveArticles = articles.filter((article) => isPublished(article.data.plannedPublishDate));
+const scheduledArticles = articles.filter((article) => !isPublished(article.data.plannedPublishDate)).reverse();
+const featured = liveArticles[0];
+const remaining = liveArticles.slice(1);
+const nextArticle = scheduledArticles[0];
+const clusterCounts = [...new Set(articles.map((article) => article.data.cluster))].map((cluster) => ({
+  cluster,
+  count: articles.filter((article) => article.data.cluster === cluster).length,
+}));
+---
+
+<SiteLayout title="Real Estate Field Notes" description="Practical guides for real estate investors, wholesalers, private lenders, and dealmakers from Fran Legacy.">
+  <section class="blog-hero">
+    <div class="blog-hero-copy">
+      <p class="eyebrow"><span></span> Fran Legacy field notes</p>
+      <h1>Clear thinking for <em>real deals.</em></h1>
+      <p>Practical guides on earnest money, transactional funding, private lending, deal analysis, and creative acquisition structures.</p>
+    </div>
+    <aside class="publishing-card">
+      <span class="live-dot"></span>
+      <p>Publishing system active</p>
+      <strong>{articles.length} articles scheduled</strong>
+      <small>New articles release every Tuesday and Thursday.</small>
+      <a href="/admin/content" rel="nofollow">View the staged calendar ↗</a>
+    </aside>
+  </section>
+
+  <section class="topic-rail" aria-label="Coverage by topic">
+    {clusterCounts.map((item, index) => <div><span>0{index + 1}</span><strong>{item.cluster}</strong><small>{item.count} articles</small></div>)}
+  </section>
+
+  {featured ? (
+    <>
+      <section class="featured-story">
+        <div class="featured-index"><span>Latest field note</span><strong>01</strong></div>
+        <div class="featured-copy">
+          <p class="article-meta">{featured.data.cluster} · {formatPublicationDate(featured.data.plannedPublishDate)}</p>
+          <h2><a href={`/blog/${featured.id}/`}>{featured.data.title}</a></h2>
+          <p>{featured.data.description}</p>
+          <a class="read-link" href={`/blog/${featured.id}/`}>Read the guide <span>↗</span></a>
+        </div>
+      </section>
+
+      {remaining.length > 0 && (
+        <section class="article-library">
+          <header><div><p class="section-kicker">The library</p><h2>Recently published</h2></div><span>{liveArticles.length} live articles</span></header>
+          <div class="article-grid">
+            {remaining.map((article, index) => (
+              <article>
+                <div class="card-number">{String(index + 2).padStart(2, '0')}</div>
+                <p class="article-meta">{article.data.cluster} · {formatPublicationDate(article.data.plannedPublishDate, false)}</p>
+                <h3><a href={`/blog/${article.id}/`}>{article.data.title}</a></h3>
+                <p>{article.data.description}</p>
+                <a class="read-link" href={`/blog/${article.id}/`}>Read <span>↗</span></a>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+    </>
+  ) : (
+    <section class="launch-state">
+      <p class="section-kicker">Calendar loaded</p>
+      <h2>The library is written.<br /><em>Publishing begins {nextArticle ? formatPublicationDate(nextArticle.data.plannedPublishDate) : 'soon'}.</em></h2>
+      <p>All {articles.length} articles are staged in advance and set to release automatically twice a week. There is nothing to upload or schedule manually.</p>
+      <div><a class="button button-dark" href="/admin/content">Review the full calendar <span>↗</span></a><a class="text-link dark-link" href="/contact">Ask Fran Legacy a question <span>↗</span></a></div>
+    </section>
+  )}
+</SiteLayout>
+
+<style>
+  .blog-hero { min-height: 720px; display: grid; grid-template-columns: 1.4fr .6fr; gap: clamp(60px, 10vw, 150px); align-items: end; padding: 210px clamp(24px, 8vw, 132px) 100px; color: var(--white); background: radial-gradient(circle at 78% 28%, rgba(88,204,224,.2), transparent 24%), linear-gradient(145deg, #061723 0%, #0d2a3e 72%, #164b60 100%); }
+  .blog-hero-copy h1 { max-width: 900px; }
+  .blog-hero-copy > p:last-child { max-width: 650px; color: rgba(255,255,255,.68); font-size: 18px; line-height: 1.7; }
+  .publishing-card { align-self: end; padding: 34px; border: 1px solid rgba(255,255,255,.2); background: rgba(3,17,29,.42); backdrop-filter: blur(12px); }
+  .publishing-card .live-dot { display: block; width: 9px; height: 9px; margin-bottom: 34px; border-radius: 50%; background: #62d99a; box-shadow: 0 0 0 7px rgba(98,217,154,.12); }
+  .publishing-card p, .publishing-card small { color: rgba(255,255,255,.58); }
+  .publishing-card p { margin-bottom: 10px; font: 500 9px var(--mono); letter-spacing: .13em; text-transform: uppercase; }
+  .publishing-card strong { display: block; margin-bottom: 8px; font: 500 30px var(--serif); }
+  .publishing-card small { display: block; line-height: 1.5; }
+  .publishing-card a { display: inline-block; margin-top: 30px; padding-bottom: 5px; color: var(--blue); border-bottom: 1px solid rgba(88,204,224,.4); font: 500 10px var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+  .topic-rail { display: grid; grid-template-columns: repeat(5, 1fr); background: var(--white); border-bottom: 1px solid var(--line); }
+  .topic-rail div { min-height: 150px; display: grid; align-content: space-between; padding: 25px 28px; border-right: 1px solid var(--line); }
+  .topic-rail div:last-child { border-right: 0; }
+  .topic-rail span, .topic-rail small { font: 9px var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+  .topic-rail span { color: var(--blue-deep); }
+  .topic-rail strong { margin-top: 28px; font: 500 23px var(--serif); }
+  .topic-rail small { margin-top: 5px; color: rgba(7,26,42,.48); }
+  .featured-story { display: grid; grid-template-columns: .45fr 1.55fr; gap: 7vw; padding: 130px clamp(24px, 8vw, 132px); }
+  .featured-index { display: flex; justify-content: space-between; align-items: flex-start; padding-top: 10px; border-top: 1px solid var(--ink); }
+  .featured-index span { margin-top: 12px; font: 9px var(--mono); text-transform: uppercase; }
+  .featured-index strong { font: 500 72px/1 var(--serif); color: var(--blue-deep); }
+  .article-meta { color: var(--blue-deep); font: 500 9px var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+  .featured-copy h2 { max-width: 900px; margin: 16px 0 24px; font: 500 clamp(50px, 6vw, 86px)/.98 var(--serif); letter-spacing: -.04em; }
+  .featured-copy > p:not(.article-meta) { max-width: 660px; color: rgba(7,26,42,.68); font-size: 18px; line-height: 1.7; }
+  .read-link { display: inline-flex; gap: 18px; margin-top: 24px; padding-bottom: 6px; border-bottom: 1px solid var(--blue-deep); font: 600 10px var(--mono); text-transform: uppercase; letter-spacing: .1em; }
+  .read-link span { color: var(--blue-deep); }
+  .article-library { padding: 120px clamp(24px, 8vw, 132px); background: var(--white); }
+  .article-library > header { display: flex; justify-content: space-between; align-items: end; margin-bottom: 54px; }
+  .article-library h2 { margin: 0; font: 500 clamp(48px, 5vw, 72px) var(--serif); }
+  .article-library > header > span { font: 9px var(--mono); text-transform: uppercase; }
+  .article-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
+  .article-grid article { min-height: 420px; padding: 28px 34px 34px 0; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .article-grid article:nth-child(3n+2), .article-grid article:nth-child(3n+3) { padding-left: 34px; }
+  .article-grid article:nth-child(3n) { border-right: 0; }
+  .card-number { margin-bottom: 58px; color: rgba(7,26,42,.35); font: 500 10px var(--mono); }
+  .article-grid h3 { margin: 14px 0 18px; font: 500 31px/1.06 var(--serif); }
+  .article-grid article > p:not(.article-meta) { color: rgba(7,26,42,.62); line-height: 1.6; }
+  .launch-state { padding: 140px clamp(24px, 10vw, 180px); text-align: center; background: var(--white); }
+  .launch-state h2 { max-width: 1050px; margin: 0 auto 30px; font: 500 clamp(50px, 6vw, 88px)/.98 var(--serif); letter-spacing: -.04em; }
+  .launch-state h2 em { color: var(--blue-deep); }
+  .launch-state > p:not(.section-kicker) { max-width: 690px; margin: 0 auto; color: rgba(7,26,42,.66); font-size: 18px; line-height: 1.7; }
+  .launch-state > div { display: flex; justify-content: center; align-items: center; gap: 32px; margin-top: 42px; }
+  .launch-state .button-dark { width: auto; color: var(--white); }
+  .dark-link { color: var(--ink); border-color: rgba(7,26,42,.4); }
+  @media (max-width: 980px) { .blog-hero { grid-template-columns: 1fr; } .publishing-card { max-width: 440px; } .topic-rail { grid-template-columns: repeat(3, 1fr); } .topic-rail div:nth-child(3) { border-right: 0; } .featured-story { grid-template-columns: 1fr; } .article-grid { grid-template-columns: repeat(2, 1fr); } .article-grid article:nth-child(n) { padding-left: 28px; border-right: 1px solid var(--line); } .article-grid article:nth-child(2n) { border-right: 0; } }
+  @media (max-width: 680px) { .blog-hero { min-height: 0; padding-top: 170px; padding-bottom: 70px; } .blog-hero h1 { font-size: clamp(58px, 17vw, 78px); } .topic-rail { grid-template-columns: 1fr 1fr; } .topic-rail div:nth-child(n) { min-height: 130px; border-right: 1px solid var(--line); } .topic-rail div:nth-child(2n) { border-right: 0; } .topic-rail div:last-child { grid-column: 1 / -1; } .featured-story, .article-library, .launch-state { padding-top: 90px; padding-bottom: 90px; } .article-grid { grid-template-columns: 1fr; } .article-grid article:nth-child(n) { min-height: 0; padding: 28px 0 40px; border-right: 0; } .card-number { margin-bottom: 34px; } .launch-state > div { flex-direction: column; } }
+</style>

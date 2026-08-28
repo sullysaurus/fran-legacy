@@ -1,0 +1,44 @@
+name: Publish scheduled blog content
+
+on:
+  schedule:
+    - cron: '5 15 * * 2,4'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scheduled-content-publication
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run test:seo
+      - run: npm run build
+
+      - id: release
+        name: Check today's release calendar
+        shell: bash
+        run: node scripts/check-scheduled-release.mjs >> "$GITHUB_OUTPUT"
+
+      - name: Trigger the connected production build
+        if: steps.release.outputs.due == 'true' || github.event_name == 'workflow_dispatch'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "chore: release scheduled blog content for ${{ steps.release.outputs.date }}"
+          git push

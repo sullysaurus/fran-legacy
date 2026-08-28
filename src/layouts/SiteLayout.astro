@@ -4,14 +4,18 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description: string;
+  robots?: string;
+  ogType?: 'website' | 'article';
+  publishedTime?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, robots, ogType = 'website', publishedTime } = Astro.props;
 const path = Astro.url.pathname;
 const nav = [
   ['/about', 'About'],
   ['/investments', 'Investments'],
   ['/private-money-lenders', 'Funding'],
+  ['/blog', 'Blog'],
   ['/contact', 'Contact'],
 ];
 ---
@@ -22,10 +26,12 @@ const nav = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
+    {robots && <meta name="robots" content={robots} />}
     <meta name="theme-color" content="#081a2b" />
     <meta property="og:title" content={`${title} | Fran Legacy`} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
     <meta property="og:url" content={Astro.url.href} />
     <meta property="og:image" content="https://franlegacy.netlify.app/brand/og-social-share.png" />
     <meta property="og:image:secure_url" content="https://franlegacy.netlify.app/brand/og-social-share.png" />
@@ -69,7 +75,7 @@ const nav = [
           <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 42 42"><path d="M8 5h12v6h-6v7h8v6h-8v13H8V5Zm15 0h11v32H23V5Zm6 6v20" /></svg></span>
           <span><strong>FRAN LEGACY</strong><small>Build beyond today.</small></span>
         </a>
-        <div class="footer-links"><a href="/about">About</a><a href="/investments">Investments</a><a href="/private-money-lenders">Funding</a><a href="/contact">Contact</a><a href="/brand">Brand kit</a></div>
+        <div class="footer-links"><a href="/about">About</a><a href="/investments">Investments</a><a href="/private-money-lenders">Funding</a><a href="/blog">Blog</a><a href="/contact">Contact</a><a href="/brand">Brand kit</a></div>
         <p>© {new Date().getFullYear()} Fran Legacy. <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></p>
         <p class="disclaimer">Real estate investments involve risk. Information on this site is educational and does not constitute financial, legal, or tax advice. Returns are not guaranteed.</p>
         <a class="footer-credit" href="https://raleighaiguy.com" target="_blank" rel="noreferrer">Built by Raleigh AI Guy <span>↗</span></a>
