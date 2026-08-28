@@ -1,0 +1,109 @@
+---
+import { getCollection } from 'astro:content';
+import queue from '../../../seo/keyword-seeds.json';
+import socialImages from '../../../seo/social-share-images.json';
+import { formatPublicationDate, isPublished, publicationAsOfDate } from '../../lib/publishing';
+
+const articles = (await getCollection('blog')).sort((a, b) => a.data.plannedPublishDate.getTime() - b.data.plannedPublishDate.getTime());
+const liveCount = articles.filter((article) => isPublished(article.data.plannedPublishDate)).length;
+const scheduledCount = articles.length - liveCount;
+const nextArticle = articles.find((article) => !isPublished(article.data.plannedPublishDate));
+const modeledDemand = queue.reduce((sum, item) => sum + (item.volume ?? 0), 0);
+const compact = new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 });
+
+const workspaces = [
+  { number: '01', href: '/admin/content', label: 'Content operations', title: 'Publishing calendar', description: 'Review all 50 articles, search the queue, check release dates, and open complete staged previews.', metric: `${scheduledCount} scheduled`, accent: 'green' },
+  { number: '02', href: '/seo-dashboard', label: 'Search intelligence', title: 'SEO dashboard', description: 'Compare Fran Legacy with Duckfund and Levine Capital, then inspect keyword and commercial-page gaps.', metric: `${compact.format(modeledDemand)} modeled demand`, accent: 'cyan' },
+  { number: '03', href: '/blog', label: 'Reader experience', title: 'Public blog', description: 'See exactly what visitors see as scheduled articles become public every Tuesday and Thursday.', metric: `${liveCount} live now`, accent: 'blue' },
+  { number: '04', href: '/', label: 'Production website', title: 'Main website', description: 'Return to the customer-facing Fran Legacy website and review the complete visitor journey.', metric: 'Open site', accent: 'cream' },
+];
+
+const siteLinks = [
+  ['/about', 'About'], ['/investments', 'Investments'], ['/private-money-lenders', 'Private money'], ['/emd-lending', 'EMD lending'], ['/contact', 'Contact'], ['/brand', 'Brand kit'],
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="description" content="Fran Legacy administration and publishing workspace." />
+    <meta property="og:title" content="Admin Workspace | Fran Legacy" />
+    <meta property="og:description" content="Fran Legacy SEO, publishing, website, and content operations in one place." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.franlegacy.com/admin/" />
+    <meta property="og:image" content="https://www.franlegacy.com/social/admin.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Fran Legacy administration workspace" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://www.franlegacy.com/social/admin.jpg" />
+    <meta name="twitter:image:alt" content="Fran Legacy administration workspace" />
+    <meta name="theme-color" content="#071a2a" />
+    <link rel="icon" type="image/png" href="/brand/favicon-512.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Sans:wdth,wght@75..100,400..700&family=Newsreader:opsz,wght@6..72,400..700&display=swap" rel="stylesheet" />
+    <title>Admin Workspace | Fran Legacy</title>
+  </head>
+  <body>
+    <header class="admin-header">
+      <a class="brand" href="/admin"><span class="brand-mark"><svg viewBox="0 0 42 42"><path d="M8 5h12v6h-6v7h8v6h-8v13H8V5Zm15 0h11v32H23V5Zm6 6v20" /></svg></span><span><strong>FRAN LEGACY</strong><small>Admin workspace</small></span></a>
+      <nav><a href="/admin/content">Content</a><a href="/seo-dashboard">SEO</a><a href="/blog">Blog ↗</a></nav>
+      <div class="access-state"><i></i><span>Demo access</span><strong>Open</strong></div>
+    </header>
+
+    <main>
+      <section class="admin-hero">
+        <div>
+          <p>Operations home</p>
+          <h1>Everything in<br /><em>one place.</em></h1>
+          <span>Use this page whenever you need to get back to a dashboard, preview, or public route.</span>
+        </div>
+        <aside>
+          <span>Next automatic release</span>
+          <strong>{nextArticle ? formatPublicationDate(nextArticle.data.plannedPublishDate) : 'Calendar complete'}</strong>
+          <p>{nextArticle?.data.title ?? 'All scheduled articles are live.'}</p>
+          <a href={nextArticle ? `/admin/content/${nextArticle.id}/` : '/blog'}>{nextArticle ? 'Preview next article' : 'Open public blog'} ↗</a>
+        </aside>
+      </section>
+
+      <section class="system-strip" aria-label="System summary">
+        <article><span>Scheduled articles</span><strong>{scheduledCount}</strong><small>Tuesday / Thursday cadence</small></article>
+        <article><span>Live articles</span><strong>{liveCount}</strong><small>public as of {publicationAsOfDate}</small></article>
+        <article><span>Search demand</span><strong>{compact.format(modeledDemand)}</strong><small>modeled monthly searches</small></article>
+        <article><span>Social cards</span><strong>{socialImages.items.length}</strong><small>route-specific assets</small></article>
+      </section>
+
+      <section class="workspace-section">
+        <header><div><p>Primary workspaces</p><h2>Where do you want to go?</h2></div><span>Every operational route is linked from here.</span></header>
+        <div class="workspace-grid">
+          {workspaces.map((item) => (
+            <a class:list={['workspace-card', item.accent]} href={item.href}>
+              <div><span>{item.number}</span><small>{item.label}</small></div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <footer><strong>{item.metric}</strong><span>Open ↗</span></footer>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="quick-links">
+        <div><p>Website shortcuts</p><h2>Customer-facing pages</h2></div>
+        <nav>{siteLinks.map(([href, label], index) => <a href={href}><span>{String(index + 1).padStart(2, '0')}</span><strong>{label}</strong><i>↗</i></a>)}</nav>
+      </section>
+
+      <footer class="admin-footer"><span>Fran Legacy internal workspace</span><span>Unprotected demo · excluded from search indexing</span><a href="/">Return to website ↗</a></footer>
+    </main>
+  </body>
+</html>
+
+<style>
+  :root{--ink:#071a2a;--ink-soft:#102b3e;--paper:#f2f2ee;--white:#fffdf8;--cyan:#58cce0;--green:#62d99a;--line:rgba(7,26,42,.17);--muted:#677781;--serif:'Newsreader',serif;--sans:'Instrument Sans',sans-serif;--mono:'DM Mono',monospace}*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--paper);font-family:var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.admin-header{position:sticky;z-index:10;top:0;min-height:72px;display:grid;grid-template-columns:1fr auto 1fr;gap:28px;align-items:center;padding:0 30px;color:#fff;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.12)}.brand{display:inline-flex;align-items:center;gap:11px;width:fit-content}.brand-mark{width:38px;height:38px;color:var(--cyan)}.brand-mark svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:2.2}.brand strong,.brand small{display:block}.brand strong{font-size:12px;letter-spacing:.16em}.brand small{margin-top:3px;color:rgba(255,255,255,.5);font:8px var(--mono);text-transform:uppercase;letter-spacing:.12em}.admin-header nav{display:flex;gap:6px}.admin-header nav a{padding:9px 11px;color:rgba(255,255,255,.65);border-radius:4px;font-size:11px}.admin-header nav a:hover{color:#fff;background:rgba(255,255,255,.08)}.access-state{justify-self:end;display:grid;grid-template-columns:auto auto;column-gap:9px;align-items:center;text-align:right}.access-state i{grid-row:1/3;width:8px;height:8px;border-radius:50%;background:#e2ad4f;box-shadow:0 0 0 5px rgba(226,173,79,.12)}.access-state span,.access-state strong{display:block}.access-state span{font:8px var(--mono);color:rgba(255,255,255,.5);text-transform:uppercase}.access-state strong{font-size:12px}main{overflow:hidden}.admin-hero{min-height:520px;display:grid;grid-template-columns:1.35fr .65fr;gap:9vw;align-items:end;padding:90px clamp(28px,7vw,110px) 70px;color:#fff;background:radial-gradient(circle at 82% 28%,rgba(88,204,224,.17),transparent 24%),linear-gradient(135deg,#071a2a,#12394c)}.admin-hero>div>p,.workspace-section>header p,.quick-links>div>p{margin:0 0 16px;color:var(--cyan);font:500 9px var(--mono);letter-spacing:.14em;text-transform:uppercase}.admin-hero h1{margin:0;font:500 clamp(70px,8vw,118px)/.84 var(--serif);letter-spacing:-.055em}.admin-hero h1 em{color:var(--cyan);font-weight:400}.admin-hero>div>span{display:block;max-width:610px;margin-top:32px;color:rgba(255,255,255,.62);font-size:16px;line-height:1.65}.admin-hero aside{padding:30px;border:1px solid rgba(255,255,255,.2);background:rgba(3,17,29,.35)}.admin-hero aside>span{font:8px var(--mono);color:var(--green);letter-spacing:.12em;text-transform:uppercase}.admin-hero aside strong{display:block;margin:14px 0 12px;font:500 32px var(--serif)}.admin-hero aside p{min-height:48px;color:rgba(255,255,255,.64);font-size:13px;line-height:1.55}.admin-hero aside a{display:inline-block;margin-top:18px;padding-bottom:5px;color:var(--cyan);border-bottom:1px solid rgba(88,204,224,.4);font:500 9px var(--mono);text-transform:uppercase;letter-spacing:.1em}.system-strip{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-bottom:1px solid var(--line)}.system-strip article{padding:25px clamp(22px,3vw,42px);border-right:1px solid var(--line)}.system-strip article:last-child{border:0}.system-strip span,.system-strip small{display:block}.system-strip span{color:var(--muted);font:8px var(--mono);text-transform:uppercase}.system-strip strong{display:block;margin:13px 0 5px;font:600 32px var(--serif)}.system-strip small{color:var(--muted);font-size:10px}.workspace-section{padding:100px clamp(28px,7vw,110px) 120px}.workspace-section>header{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:38px}.workspace-section>header p{color:#188ca4;margin-bottom:8px}.workspace-section>header h2,.quick-links h2{margin:0;font:500 clamp(44px,5vw,70px)/1 var(--serif);letter-spacing:-.04em}.workspace-section>header>span{max-width:280px;color:var(--muted);font-size:12px}.workspace-grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.workspace-card{position:relative;min-height:350px;display:flex;flex-direction:column;padding:30px 34px;background:#fff;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:transform .25s ease,box-shadow .25s ease}.workspace-card::before{content:'';position:absolute;inset:0 auto 0 0;width:3px;background:var(--card-accent)}.workspace-card:hover{z-index:1;transform:translateY(-4px);box-shadow:0 20px 50px rgba(7,26,42,.09)}.workspace-card.green{--card-accent:#45bd7d}.workspace-card.cyan{--card-accent:#188ca4}.workspace-card.blue{--card-accent:#6961ac}.workspace-card.cream{--card-accent:#c18845}.workspace-card>div{display:flex;justify-content:space-between;color:var(--muted);font:8px var(--mono);text-transform:uppercase;letter-spacing:.1em}.workspace-card>div>span{color:var(--card-accent)}.workspace-card h3{margin:58px 0 16px;font:500 clamp(36px,4vw,54px)/1 var(--serif);letter-spacing:-.03em}.workspace-card>p{max-width:520px;color:rgba(7,26,42,.62);font-size:14px;line-height:1.65}.workspace-card footer{display:flex;justify-content:space-between;align-items:end;margin-top:auto;padding-top:28px;border-top:1px solid var(--line)}.workspace-card footer strong{font:500 18px var(--serif)}.workspace-card footer span{color:var(--card-accent);font:600 9px var(--mono);text-transform:uppercase}.quick-links{display:grid;grid-template-columns:.75fr 1.25fr;gap:8vw;padding:95px clamp(28px,7vw,110px);color:#fff;background:var(--ink-soft)}.quick-links nav{border-top:1px solid rgba(255,255,255,.18)}.quick-links nav a{display:grid;grid-template-columns:50px 1fr auto;align-items:center;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.18);transition:padding .2s ease,color .2s ease}.quick-links nav a:hover{padding-left:10px;color:var(--cyan)}.quick-links nav span{color:var(--cyan);font:8px var(--mono)}.quick-links nav strong{font:500 22px var(--serif)}.quick-links nav i{font-style:normal;color:var(--cyan)}.admin-footer{display:flex;justify-content:space-between;gap:24px;padding:24px clamp(28px,7vw,110px);color:#7d8b92;background:#03111d;font:8px var(--mono);text-transform:uppercase}.admin-footer a{color:var(--cyan)}
+  @media(max-width:900px){.admin-header{grid-template-columns:1fr auto}.admin-header nav{display:none}.admin-hero{grid-template-columns:1fr}.admin-hero aside{max-width:480px}.system-strip{grid-template-columns:1fr 1fr}.system-strip article:nth-child(2){border-right:0}.system-strip article:nth-child(-n+2){border-bottom:1px solid var(--line)}.quick-links{grid-template-columns:1fr}}
+  @media(max-width:620px){.admin-header{padding:0 15px}.access-state span{display:none}.admin-hero{min-height:0;padding:75px 22px 58px}.admin-hero h1{font-size:clamp(64px,19vw,82px)}.workspace-section{padding:75px 15px 85px}.workspace-section>header{align-items:flex-start;flex-direction:column}.workspace-grid{grid-template-columns:1fr}.workspace-card{min-height:320px;padding:26px}.quick-links{padding:75px 22px}.admin-footer{align-items:flex-start;flex-direction:column;padding:24px 22px}}
+</style>

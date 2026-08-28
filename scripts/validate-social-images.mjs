@@ -7,7 +7,7 @@ const manifest = JSON.parse(await readFile(path.join(root, 'seo/social-share-ima
 const failures = [];
 
 if (manifest.width !== 1200 || manifest.height !== 630) failures.push('Manifest dimensions must be 1200×630.');
-if (manifest.items.length !== 64) failures.push(`Expected 64 social images, found ${manifest.items.length}.`);
+if (manifest.items.length !== 65) failures.push(`Expected 65 social images, found ${manifest.items.length}.`);
 
 for (const item of manifest.items) {
   const imagePath = path.join(root, 'public', item.image.replace(/^\//, ''));

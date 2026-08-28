@@ -1,9 +1,15 @@
 {
-  "generatedAt": "2026-08-28T16:06:31.570Z",
+  "generatedAt": "2026-08-28T17:31:08.647Z",
   "width": 1200,
   "height": 630,
   "format": "image/jpeg",
   "items": [
+    {
+      "route": "/admin/",
+      "image": "/social/admin.jpg",
+      "title": "Everything in one place.",
+      "alt": "Everything in one place. — Fran Legacy"
+    },
     {
       "route": "/",
       "image": "/social/home.jpg",

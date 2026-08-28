@@ -9,6 +9,7 @@ const articleOutputDirectory = path.join(outputDirectory, 'blog');
 const queue = JSON.parse(await readFile(path.join(root, 'seo/keyword-seeds.json'), 'utf8'));
 
 const staticCards = [
+  { route: '/admin/', file: 'admin.jpg', eyebrow: 'Admin workspace', title: 'Everything in one place.', detail: 'SEO · Content · Blog · Website', theme: 'admin' },
   { route: '/', file: 'home.jpg', eyebrow: 'Creative finance · Raleigh, NC', title: 'Build the kind of wealth that outlives you.', detail: 'Fran Legacy', theme: 'home', image: 'images/hero-neighborhood.jpg' },
   { route: '/about/', file: 'about.jpg', eyebrow: 'About Fran Legacy', title: 'Real estate strategy built for the long view.', detail: 'Clarity · Alignment · Legacy', theme: 'about', image: 'images/about-home.jpg' },
   { route: '/investments/', file: 'investments.jpg', eyebrow: 'Investment opportunities', title: 'Put capital to work with the whole deal in view.', detail: 'Real estate · Raleigh, NC', theme: 'investment', image: 'images/triangle-house.jpg' },

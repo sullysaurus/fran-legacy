@@ -68,11 +68,11 @@ const sortedQueue = [...queue].sort((a, b) => b.priorityScore - a.priorityScore 
   </head>
   <body>
     <header class="app-header">
-      <a class="brand" href="/" aria-label="Fran Legacy home">
+      <a class="brand" href="/admin" aria-label="Fran Legacy admin home">
         <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 42 42"><path d="M8 5h12v6h-6v7h8v6h-8v13H8V5Zm15 0h11v32H23V5Zm6 6v20" /></svg></span>
         <span><strong>FRAN LEGACY</strong><small>SEO dashboard</small></span>
       </a>
-      <nav aria-label="Dashboard sections"><a href="#overview">Overview</a><a href="#competitors">Competitors</a><a href="#opportunities">Commercial gaps</a><a href="#content">Content queue</a><a href="/admin/content">Content admin ↗</a></nav>
+      <nav aria-label="Dashboard sections"><a href="/admin">Admin home</a><a href="#competitors">Competitors</a><a href="#opportunities">Commercial gaps</a><a href="#content">Content queue</a><a href="/admin/content">Content admin ↗</a></nav>
       <div class="header-date"><span>Research updated</span><strong>{dateLabel(research.collectedAt)}</strong></div>
     </header>
 
