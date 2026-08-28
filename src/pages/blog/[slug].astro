@@ -14,7 +14,7 @@ const { article } = Astro.props;
 const { Content } = await render(article);
 ---
 
-<SiteLayout title={article.data.title} description={article.data.description} ogType="article" publishedTime={`${dateKey(article.data.plannedPublishDate)}T09:00:00-04:00`}>
+<SiteLayout title={article.data.title} description={article.data.description} ogType="article" publishedTime={`${dateKey(article.data.plannedPublishDate)}T09:00:00-04:00`} image={`/social/blog/${article.id}.jpg`} imageAlt={`${article.data.title} — Fran Legacy field notes`}>
   <article class="blog-article">
     <header class="article-hero">
       <div class="article-hero-inner">

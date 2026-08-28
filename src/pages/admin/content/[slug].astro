@@ -12,7 +12,7 @@ const { Content } = await render(article);
 const live = isPublished(article.data.plannedPublishDate);
 ---
 
-<SiteLayout title={`Preview: ${article.data.title}`} description={article.data.description} robots="noindex,nofollow">
+<SiteLayout title={`Preview: ${article.data.title}`} description={article.data.description} robots="noindex,nofollow" image={`/social/blog/${article.id}.jpg`} imageAlt={`${article.data.title} — Fran Legacy field notes`}>
   <div class="preview-bar"><div><i></i><strong>{live ? 'Live article' : 'Scheduled preview'}</strong><span>{live ? 'This article is public.' : `Automatic release: ${formatPublicationDate(article.data.plannedPublishDate)}`}</span></div><nav><a href="/admin/content">← Content calendar</a>{live && <a href={`/blog/${article.id}/`}>Open public URL ↗</a>}</nav></div>
   <article class="preview-article">
     <header>

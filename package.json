@@ -10,10 +10,16 @@
     "content:generate": "node scripts/generate-seo-content.mjs",
     "content:check": "node scripts/validate-content-engine.mjs",
     "content:release-check": "node scripts/check-scheduled-release.mjs",
-    "test:seo": "node scripts/validate-content-engine.mjs"
+    "social:generate": "node scripts/generate-social-images.mjs",
+    "social:check": "node scripts/validate-social-images.mjs",
+    "social:check:build": "node scripts/validate-built-social-metadata.mjs",
+    "test:seo": "node scripts/validate-content-engine.mjs && node scripts/validate-social-images.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",
     "astro": "^7.2.4"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.4"
   }
 }

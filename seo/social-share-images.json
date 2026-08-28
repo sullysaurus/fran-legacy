@@ -1,0 +1,442 @@
+{
+  "generatedAt": "2026-08-28T16:06:31.570Z",
+  "width": 1200,
+  "height": 630,
+  "format": "image/jpeg",
+  "items": [
+    {
+      "route": "/",
+      "image": "/social/home.jpg",
+      "title": "Build the kind of wealth that outlives you.",
+      "alt": "Build the kind of wealth that outlives you. — Fran Legacy"
+    },
+    {
+      "route": "/about/",
+      "image": "/social/about.jpg",
+      "title": "Real estate strategy built for the long view.",
+      "alt": "Real estate strategy built for the long view. — Fran Legacy"
+    },
+    {
+      "route": "/investments/",
+      "image": "/social/investments.jpg",
+      "title": "Put capital to work with the whole deal in view.",
+      "alt": "Put capital to work with the whole deal in view. — Fran Legacy"
+    },
+    {
+      "route": "/current-investments/",
+      "image": "/social/current-investments.jpg",
+      "title": "See the properties and strategies already in motion.",
+      "alt": "See the properties and strategies already in motion. — Fran Legacy"
+    },
+    {
+      "route": "/private-money-lenders/",
+      "image": "/social/private-money-lenders.jpg",
+      "title": "Evaluate the deal, the downside, and the path to repayment.",
+      "alt": "Evaluate the deal, the downside, and the path to repayment. — Fran Legacy"
+    },
+    {
+      "route": "/emd-lending/",
+      "image": "/social/emd-lending.jpg",
+      "title": "Bridge the gap between contract and close.",
+      "alt": "Bridge the gap between contract and close. — Fran Legacy"
+    },
+    {
+      "route": "/emd-lending-form/",
+      "image": "/social/emd-lending-form.jpg",
+      "title": "Bring the complete transaction into focus.",
+      "alt": "Bring the complete transaction into focus. — Fran Legacy"
+    },
+    {
+      "route": "/contact/",
+      "image": "/social/contact.jpg",
+      "title": "Tell us what you are working on.",
+      "alt": "Tell us what you are working on. — Fran Legacy"
+    },
+    {
+      "route": "/brand/",
+      "image": "/social/brand.jpg",
+      "title": "A visual system built beyond today.",
+      "alt": "A visual system built beyond today. — Fran Legacy"
+    },
+    {
+      "route": "/blog/",
+      "image": "/social/blog.jpg",
+      "title": "Clear thinking for real deals.",
+      "alt": "Clear thinking for real deals. — Fran Legacy"
+    },
+    {
+      "route": "/privacy/",
+      "image": "/social/privacy.jpg",
+      "title": "Privacy policy",
+      "alt": "Privacy policy — Fran Legacy"
+    },
+    {
+      "route": "/terms/",
+      "image": "/social/terms.jpg",
+      "title": "Terms of use",
+      "alt": "Terms of use — Fran Legacy"
+    },
+    {
+      "route": "/seo-dashboard/",
+      "image": "/social/seo-dashboard.jpg",
+      "title": "Competitor visibility and search opportunity map.",
+      "alt": "Competitor visibility and search opportunity map. — Fran Legacy"
+    },
+    {
+      "route": "/admin/content/",
+      "image": "/social/content-admin.jpg",
+      "title": "50 posts already scheduled.",
+      "alt": "50 posts already scheduled. — Fran Legacy"
+    },
+    {
+      "route": "/blog/earnest-money-deposit-guide/",
+      "previewRoute": "/admin/content/earnest-money-deposit-guide/",
+      "image": "/social/blog/earnest-money-deposit-guide.jpg",
+      "title": "Earnest Money Deposits: A Practical Guide for Real Estate Investors",
+      "alt": "Earnest Money Deposits: A Practical Guide for Real Estate Investors — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/is-earnest-money-refundable/",
+      "previewRoute": "/admin/content/is-earnest-money-refundable/",
+      "image": "/social/blog/is-earnest-money-refundable.jpg",
+      "title": "Is Earnest Money Refundable? Start With the Contract",
+      "alt": "Is Earnest Money Refundable? Start With the Contract — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/when-is-earnest-money-due/",
+      "previewRoute": "/admin/content/when-is-earnest-money-due/",
+      "image": "/social/blog/when-is-earnest-money-due.jpg",
+      "title": "When Is Earnest Money Due in a Real Estate Deal?",
+      "alt": "When Is Earnest Money Due in a Real Estate Deal? — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/what-happens-if-earnest-money-is-late/",
+      "previewRoute": "/admin/content/what-happens-if-earnest-money-is-late/",
+      "image": "/social/blog/what-happens-if-earnest-money-is-late.jpg",
+      "title": "What Happens If Earnest Money Is Late?",
+      "alt": "What Happens If Earnest Money Is Late? — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/earnest-money-vs-down-payment/",
+      "previewRoute": "/admin/content/earnest-money-vs-down-payment/",
+      "image": "/social/blog/earnest-money-vs-down-payment.jpg",
+      "title": "Earnest Money vs. Down Payment: What Changes and When?",
+      "alt": "Earnest Money vs. Down Payment: What Changes and When? — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/option-fee-vs-earnest-money/",
+      "previewRoute": "/admin/content/option-fee-vs-earnest-money/",
+      "image": "/social/blog/option-fee-vs-earnest-money.jpg",
+      "title": "Option Fee vs. Earnest Money: Two Different Contract Tools",
+      "alt": "Option Fee vs. Earnest Money: Two Different Contract Tools — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/who-holds-earnest-money/",
+      "previewRoute": "/admin/content/who-holds-earnest-money/",
+      "image": "/social/blog/who-holds-earnest-money.jpg",
+      "title": "Who Holds Earnest Money Before Closing?",
+      "alt": "Who Holds Earnest Money Before Closing? — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/when-can-seller-keep-earnest-money/",
+      "previewRoute": "/admin/content/when-can-seller-keep-earnest-money/",
+      "image": "/social/blog/when-can-seller-keep-earnest-money.jpg",
+      "title": "When Can a Seller Keep Earnest Money?",
+      "alt": "When Can a Seller Keep Earnest Money? — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/earnest-money-commercial-real-estate/",
+      "previewRoute": "/admin/content/earnest-money-commercial-real-estate/",
+      "image": "/social/blog/earnest-money-commercial-real-estate.jpg",
+      "title": "Earnest Money in Commercial Real Estate Deals",
+      "alt": "Earnest Money in Commercial Real Estate Deals — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/what-is-transactional-funding/",
+      "previewRoute": "/admin/content/what-is-transactional-funding/",
+      "image": "/social/blog/what-is-transactional-funding.jpg",
+      "title": "What Is Transactional Funding in Real Estate?",
+      "alt": "What Is Transactional Funding in Real Estate? — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/assignment-vs-double-close/",
+      "previewRoute": "/admin/content/assignment-vs-double-close/",
+      "image": "/social/blog/assignment-vs-double-close.jpg",
+      "title": "Assignment vs. Double Close: How Wholesalers Choose",
+      "alt": "Assignment vs. Double Close: How Wholesalers Choose — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/double-close-timeline/",
+      "previewRoute": "/admin/content/double-close-timeline/",
+      "image": "/social/blog/double-close-timeline.jpg",
+      "title": "A Double-Close Timeline From Contract to Two Settlements",
+      "alt": "A Double-Close Timeline From Contract to Two Settlements — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/double-close-closing-costs/",
+      "previewRoute": "/admin/content/double-close-closing-costs/",
+      "image": "/social/blog/double-close-closing-costs.jpg",
+      "title": "What Costs Belong in a Double-Close Analysis?",
+      "alt": "What Costs Belong in a Double-Close Analysis? — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/transactional-funding-document-checklist/",
+      "previewRoute": "/admin/content/transactional-funding-document-checklist/",
+      "image": "/social/blog/transactional-funding-document-checklist.jpg",
+      "title": "Transactional Funding Document Checklist",
+      "alt": "Transactional Funding Document Checklist — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/transactional-funding-vs-hard-money/",
+      "previewRoute": "/admin/content/transactional-funding-vs-hard-money/",
+      "image": "/social/blog/transactional-funding-vs-hard-money.jpg",
+      "title": "Transactional Funding vs. Hard Money",
+      "alt": "Transactional Funding vs. Hard Money — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/proof-of-funds-real-estate/",
+      "previewRoute": "/admin/content/proof-of-funds-real-estate/",
+      "image": "/social/blog/proof-of-funds-real-estate.jpg",
+      "title": "Proof of Funds in Real Estate: What It Shows—and What It Does Not",
+      "alt": "Proof of Funds in Real Estate: What It Shows—and What It Does Not — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/abc-real-estate-transaction/",
+      "previewRoute": "/admin/content/abc-real-estate-transaction/",
+      "image": "/social/blog/abc-real-estate-transaction.jpg",
+      "title": "A-B and B-C Real Estate Transactions Explained",
+      "alt": "A-B and B-C Real Estate Transactions Explained — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/wholesale-real-estate-closing-process/",
+      "previewRoute": "/admin/content/wholesale-real-estate-closing-process/",
+      "image": "/social/blog/wholesale-real-estate-closing-process.jpg",
+      "title": "The Wholesale Real Estate Closing Process",
+      "alt": "The Wholesale Real Estate Closing Process — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/private-money-lending-real-estate/",
+      "previewRoute": "/admin/content/private-money-lending-real-estate/",
+      "image": "/social/blog/private-money-lending-real-estate.jpg",
+      "title": "How Private Money Lending Works in Real Estate",
+      "alt": "How Private Money Lending Works in Real Estate — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/private-money-vs-hard-money/",
+      "previewRoute": "/admin/content/private-money-vs-hard-money/",
+      "image": "/social/blog/private-money-vs-hard-money.jpg",
+      "title": "Private Money vs. Hard Money for Real Estate Investors",
+      "alt": "Private Money vs. Hard Money for Real Estate Investors — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/present-deal-to-private-lender/",
+      "previewRoute": "/admin/content/present-deal-to-private-lender/",
+      "image": "/social/blog/present-deal-to-private-lender.jpg",
+      "title": "How to Present a Real Estate Deal to a Private Lender",
+      "alt": "How to Present a Real Estate Deal to a Private Lender — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/private-money-loan-documents/",
+      "previewRoute": "/admin/content/private-money-loan-documents/",
+      "image": "/social/blog/private-money-loan-documents.jpg",
+      "title": "Private Money Loan Documents: A Borrower’s Checklist",
+      "alt": "Private Money Loan Documents: A Borrower’s Checklist — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/private-money-loan-terms/",
+      "previewRoute": "/admin/content/private-money-loan-terms/",
+      "image": "/social/blog/private-money-loan-terms.jpg",
+      "title": "Private Money Loan Terms Investors Should Compare",
+      "alt": "Private Money Loan Terms Investors Should Compare — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/private-money-lending-risks/",
+      "previewRoute": "/admin/content/private-money-lending-risks/",
+      "image": "/social/blog/private-money-lending-risks.jpg",
+      "title": "Private Money Lending Risks: A Due-Diligence Framework",
+      "alt": "Private Money Lending Risks: A Due-Diligence Framework — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/private-lender-vs-equity-partner/",
+      "previewRoute": "/admin/content/private-lender-vs-equity-partner/",
+      "image": "/social/blog/private-lender-vs-equity-partner.jpg",
+      "title": "Private Lender vs. Equity Partner in a Real Estate Deal",
+      "alt": "Private Lender vs. Equity Partner in a Real Estate Deal — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/bridge-loan-vs-hard-money/",
+      "previewRoute": "/admin/content/bridge-loan-vs-hard-money/",
+      "image": "/social/blog/bridge-loan-vs-hard-money.jpg",
+      "title": "Bridge Loan vs. Hard Money: Compare the Actual Structure",
+      "alt": "Bridge Loan vs. Hard Money: Compare the Actual Structure — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/gap-funding-real-estate/",
+      "previewRoute": "/admin/content/gap-funding-real-estate/",
+      "image": "/social/blog/gap-funding-real-estate.jpg",
+      "title": "What Is Gap Funding in Real Estate?",
+      "alt": "What Is Gap Funding in Real Estate? — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/first-lien-vs-second-lien/",
+      "previewRoute": "/admin/content/first-lien-vs-second-lien/",
+      "image": "/social/blog/first-lien-vs-second-lien.jpg",
+      "title": "First Lien vs. Second Lien in Real Estate Lending",
+      "alt": "First Lien vs. Second Lien in Real Estate Lending — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/promissory-note-vs-deed-of-trust/",
+      "previewRoute": "/admin/content/promissory-note-vs-deed-of-trust/",
+      "image": "/social/blog/promissory-note-vs-deed-of-trust.jpg",
+      "title": "Promissory Note vs. Deed of Trust",
+      "alt": "Promissory Note vs. Deed of Trust — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/loan-to-cost-vs-loan-to-value/",
+      "previewRoute": "/admin/content/loan-to-cost-vs-loan-to-value/",
+      "image": "/social/blog/loan-to-cost-vs-loan-to-value.jpg",
+      "title": "Loan-to-Cost vs. Loan-to-Value for Real Estate Deals",
+      "alt": "Loan-to-Cost vs. Loan-to-Value for Real Estate Deals — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/after-repair-value-real-estate/",
+      "previewRoute": "/admin/content/after-repair-value-real-estate/",
+      "image": "/social/blog/after-repair-value-real-estate.jpg",
+      "title": "After-Repair Value: How Investors Should Use ARV",
+      "alt": "After-Repair Value: How Investors Should Use ARV — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/dscr-loan-requirements/",
+      "previewRoute": "/admin/content/dscr-loan-requirements/",
+      "image": "/social/blog/dscr-loan-requirements.jpg",
+      "title": "DSCR Loan Requirements: What Rental Investors Should Prepare",
+      "alt": "DSCR Loan Requirements: What Rental Investors Should Prepare — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/dscr-loan-vs-hard-money/",
+      "previewRoute": "/admin/content/dscr-loan-vs-hard-money/",
+      "image": "/social/blog/dscr-loan-vs-hard-money.jpg",
+      "title": "DSCR Loan vs. Hard Money for a Rental Property",
+      "alt": "DSCR Loan vs. Hard Money for a Rental Property — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/real-estate-buy-box/",
+      "previewRoute": "/admin/content/real-estate-buy-box/",
+      "image": "/social/blog/real-estate-buy-box.jpg",
+      "title": "How to Build a Real Estate Buy Box That Improves Decisions",
+      "alt": "How to Build a Real Estate Buy Box That Improves Decisions — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/analyze-real-estate-deal/",
+      "previewRoute": "/admin/content/analyze-real-estate-deal/",
+      "image": "/social/blog/analyze-real-estate-deal.jpg",
+      "title": "How to Analyze a Real Estate Deal Before You Commit",
+      "alt": "How to Analyze a Real Estate Deal Before You Commit — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/fix-and-flip-deal-analysis/",
+      "previewRoute": "/admin/content/fix-and-flip-deal-analysis/",
+      "image": "/social/blog/fix-and-flip-deal-analysis.jpg",
+      "title": "Fix-and-Flip Deal Analysis: From Purchase to Net Proceeds",
+      "alt": "Fix-and-Flip Deal Analysis: From Purchase to Net Proceeds — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/wholesale-real-estate-deal-analysis/",
+      "previewRoute": "/admin/content/wholesale-real-estate-deal-analysis/",
+      "image": "/social/blog/wholesale-real-estate-deal-analysis.jpg",
+      "title": "Wholesale Deal Analysis: What Makes a Contract Marketable?",
+      "alt": "Wholesale Deal Analysis: What Makes a Contract Marketable? — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/rental-property-analysis/",
+      "previewRoute": "/admin/content/rental-property-analysis/",
+      "image": "/social/blog/rental-property-analysis.jpg",
+      "title": "Rental Property Analysis Beyond the Monthly Rent",
+      "alt": "Rental Property Analysis Beyond the Monthly Rent — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/cap-rate-vs-cash-on-cash-return/",
+      "previewRoute": "/admin/content/cap-rate-vs-cash-on-cash-return/",
+      "image": "/social/blog/cap-rate-vs-cash-on-cash-return.jpg",
+      "title": "Cap Rate vs. Cash-on-Cash Return",
+      "alt": "Cap Rate vs. Cash-on-Cash Return — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/70-percent-rule-real-estate/",
+      "previewRoute": "/admin/content/70-percent-rule-real-estate/",
+      "image": "/social/blog/70-percent-rule-real-estate.jpg",
+      "title": "The 70% Rule in Real Estate: Screen, Then Underwrite",
+      "alt": "The 70% Rule in Real Estate: Screen, Then Underwrite — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/real-estate-due-diligence-checklist/",
+      "previewRoute": "/admin/content/real-estate-due-diligence-checklist/",
+      "image": "/social/blog/real-estate-due-diligence-checklist.jpg",
+      "title": "Real Estate Due Diligence Checklist for Investors",
+      "alt": "Real Estate Due Diligence Checklist for Investors — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/real-estate-exit-strategy/",
+      "previewRoute": "/admin/content/real-estate-exit-strategy/",
+      "image": "/social/blog/real-estate-exit-strategy.jpg",
+      "title": "Real Estate Exit Strategies: Choose Before You Close",
+      "alt": "Real Estate Exit Strategies: Choose Before You Close — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/co-living-investment-property/",
+      "previewRoute": "/admin/content/co-living-investment-property/",
+      "image": "/social/blog/co-living-investment-property.jpg",
+      "title": "Co-Living as an Investment Property Strategy",
+      "alt": "Co-Living as an Investment Property Strategy — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/creative-financing-real-estate/",
+      "previewRoute": "/admin/content/creative-financing-real-estate/",
+      "image": "/social/blog/creative-financing-real-estate.jpg",
+      "title": "Creative Financing in Real Estate: Start With the Problem",
+      "alt": "Creative Financing in Real Estate: Start With the Problem — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/seller-financing-real-estate/",
+      "previewRoute": "/admin/content/seller-financing-real-estate/",
+      "image": "/social/blog/seller-financing-real-estate.jpg",
+      "title": "Seller Financing in Real Estate: Terms Both Sides Should Understand",
+      "alt": "Seller Financing in Real Estate: Terms Both Sides Should Understand — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/subject-to-real-estate/",
+      "previewRoute": "/admin/content/subject-to-real-estate/",
+      "image": "/social/blog/subject-to-real-estate.jpg",
+      "title": "Subject-To Real Estate: What the Structure Actually Means",
+      "alt": "Subject-To Real Estate: What the Structure Actually Means — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/subject-to-vs-seller-financing/",
+      "previewRoute": "/admin/content/subject-to-vs-seller-financing/",
+      "image": "/social/blog/subject-to-vs-seller-financing.jpg",
+      "title": "Subject-To vs. Seller Financing",
+      "alt": "Subject-To vs. Seller Financing — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/brrrr-method-real-estate/",
+      "previewRoute": "/admin/content/brrrr-method-real-estate/",
+      "image": "/social/blog/brrrr-method-real-estate.jpg",
+      "title": "The BRRRR Method: Underwrite Every Transition",
+      "alt": "The BRRRR Method: Underwrite Every Transition — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/short-mid-long-term-rental/",
+      "previewRoute": "/admin/content/short-mid-long-term-rental/",
+      "image": "/social/blog/short-mid-long-term-rental.jpg",
+      "title": "Short-Term vs. Mid-Term vs. Long-Term Rental Strategy",
+      "alt": "Short-Term vs. Mid-Term vs. Long-Term Rental Strategy — Fran Legacy field notes"
+    },
+    {
+      "route": "/blog/creative-finance-deal-structure-checklist/",
+      "previewRoute": "/admin/content/creative-finance-deal-structure-checklist/",
+      "image": "/social/blog/creative-finance-deal-structure-checklist.jpg",
+      "title": "Creative-Finance Deal Structure Checklist",
+      "alt": "Creative-Finance Deal Structure Checklist — Fran Legacy field notes"
+    }
+  ]
+}
