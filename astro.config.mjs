@@ -3,5 +3,5 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://franlegacy.netlify.app',
-  integrations: [sitemap()],
+  integrations: [sitemap({ filter: (page) => !page.endsWith('/seo-dashboard/') })],
 });

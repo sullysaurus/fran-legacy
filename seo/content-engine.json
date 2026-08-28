@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "brand": {
+    "name": "Fran Legacy",
+    "siteUrl": "https://www.franlegacy.com",
+    "audience": "Real estate investors, wholesalers, private lenders, and property owners seeking practical deal funding, acquisition, and creative-finance guidance",
+    "markets": ["United States", "Raleigh", "North Carolina"],
+    "voice": "Clear, disciplined, practical, calm about risk, and focused on making the full deal understandable",
+    "verifiedFacts": [
+      "Fran Legacy is based in Raleigh, North Carolina.",
+      "Fran Legacy evaluates single-family, multifamily, and select commercial real estate opportunities.",
+      "The current website accepts inquiries for EMD, double-close, transactional, and private-money lending scenarios.",
+      "Fran Legacy discusses traditional acquisitions, subject-to transactions, seller financing, and multiple rental strategies."
+    ],
+    "prohibitedClaims": [
+      "Guaranteed funding, approval, closing speed, returns, savings, or investment outcomes",
+      "Nationwide lending coverage unless the owner confirms it in writing",
+      "Rates, fees, loan sizes, credit requirements, or underwriting terms not confirmed for Fran Legacy",
+      "Legal, tax, accounting, securities, lending-compliance, or investment advice",
+      "The current website's 12–30% return language without legal and owner review"
+    ]
+  },
+  "content": {
+    "directory": "src/content/blog",
+    "schemaFile": "src/content.config.ts",
+    "extensions": ["md"],
+    "fields": {
+      "title": "title",
+      "description": "description",
+      "publishedDate": "plannedPublishDate",
+      "targetKeyword": "targetKeyword"
+    },
+    "primaryCtas": {
+      "emd": "/emd-lending",
+      "privateMoney": "/private-money-lenders",
+      "consultation": "/contact"
+    }
+  },
+  "workflow": {
+    "queueFile": "seo/keyword-seeds.json",
+    "stateFile": "seo/content-state.json",
+    "variationMapFile": "seo/keyword-variation-map.json",
+    "researchSnapshotFile": "seo/keywords-everywhere-research.json",
+    "commands": {
+      "queue": "npm run content:check",
+      "brief": "npm run content:check",
+      "markDraft": "npm run content:check",
+      "check": "npm run content:check",
+      "build": "npm run build",
+      "test": "npm run test:seo"
+    }
+  },
+  "publishing": {
+    "cadence": "twice weekly after human approval",
+    "timezone": "America/New_York",
+    "dateField": "plannedPublishDate",
+    "releaseMechanism": "draft-only; no automatic publishing configured"
+  },
+  "research": {
+    "country": "United States",
+    "currency": "USD",
+    "collectedAt": "2026-08-28",
+    "dailyCreditLimit": 500
+  },
+  "tracking": {
+    "sitemapUrl": "https://www.franlegacy.com/sitemap.xml",
+    "robotsUrl": "https://www.franlegacy.com/robots.txt",
+    "gscProperty": "Not connected in this repository",
+    "dashboardUrl": "/seo-dashboard/"
+  }
+}

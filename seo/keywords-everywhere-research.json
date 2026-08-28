@@ -1,0 +1,465 @@
+{
+  "collectedAt": "2026-08-28",
+  "country": "United States",
+  "currency": "USD",
+  "dataSource": "Keywords Everywhere clickstream + Google Keyword Planner",
+  "creditsUsedThisPass": 498,
+  "notes": [
+    "Null metrics were not queried during the capped research pass.",
+    "Zero is a measured value and is not proof of zero demand.",
+    "Competition is paid-ad competition, not organic SEO difficulty.",
+    "Commercial lender intent is stored separately in seo/competitor-research.json and is not inflated into the 50-post article count."
+  ],
+  "items": [
+    {
+      "keyword": "earnest money deposit",
+      "volume": 27100,
+      "cpc": 0.02,
+      "competition": 0.06,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P1",
+      "priorityScore": 14.4
+    },
+    {
+      "keyword": "is earnest money refundable",
+      "volume": 1900,
+      "cpc": 0.03,
+      "competition": 0.03,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P1",
+      "priorityScore": 13.3
+    },
+    {
+      "keyword": "when is earnest money due",
+      "volume": 480,
+      "cpc": 0.02,
+      "competition": 0.03,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 12.7
+    },
+    {
+      "keyword": "what happens if earnest money is late",
+      "volume": 0,
+      "cpc": 0,
+      "competition": 0,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P3",
+      "priorityScore": 10
+    },
+    {
+      "keyword": "earnest money vs down payment",
+      "volume": 320,
+      "cpc": 0.04,
+      "competition": 0.03,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 12.5
+    },
+    {
+      "keyword": "option fee vs earnest money",
+      "volume": 90,
+      "cpc": 0,
+      "competition": 0.02,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 12
+    },
+    {
+      "keyword": "who holds earnest money",
+      "volume": 110,
+      "cpc": 0,
+      "competition": 0.03,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 12
+    },
+    {
+      "keyword": "when can seller keep earnest money",
+      "volume": 140,
+      "cpc": 0.02,
+      "competition": 0.04,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 12.2
+    },
+    {
+      "keyword": "earnest money commercial real estate",
+      "volume": 30,
+      "cpc": 0,
+      "competition": 0.05,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 11.5
+    },
+    {
+      "keyword": "what is transactional funding",
+      "volume": 90,
+      "cpc": 0.26,
+      "competition": 0.17,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 12
+    },
+    {
+      "keyword": "assignment vs double close",
+      "volume": 0,
+      "cpc": 0,
+      "competition": 0,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P3",
+      "priorityScore": 10
+    },
+    {
+      "keyword": "double close timeline",
+      "volume": 0,
+      "cpc": 0,
+      "competition": 0,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P3",
+      "priorityScore": 10
+    },
+    {
+      "keyword": "double close closing costs",
+      "volume": 0,
+      "cpc": 0,
+      "competition": 0,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P3",
+      "priorityScore": 10
+    },
+    {
+      "keyword": "transactional funding document checklist",
+      "volume": 0,
+      "cpc": 0,
+      "competition": 0,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P3",
+      "priorityScore": 10
+    },
+    {
+      "keyword": "transactional funding vs hard money",
+      "volume": 0,
+      "cpc": 0,
+      "competition": 0,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P3",
+      "priorityScore": 10
+    },
+    {
+      "keyword": "proof of funds real estate",
+      "volume": 480,
+      "cpc": 1.8,
+      "competition": 0.17,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P1",
+      "priorityScore": 13.1
+    },
+    {
+      "keyword": "a b c transaction real estate",
+      "volume": 0,
+      "cpc": 0,
+      "competition": 0,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P3",
+      "priorityScore": 10
+    },
+    {
+      "keyword": "wholesale real estate closing process",
+      "volume": 0,
+      "cpc": 0,
+      "competition": 0,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P3",
+      "priorityScore": 10
+    },
+    {
+      "keyword": "private money lending real estate",
+      "volume": 590,
+      "cpc": 6.42,
+      "competition": 0.7,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P1",
+      "priorityScore": 14.4
+    },
+    {
+      "keyword": "private money vs hard money",
+      "volume": 90,
+      "cpc": 3.98,
+      "competition": 0.16,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P1",
+      "priorityScore": 13
+    },
+    {
+      "keyword": "how to present a deal to a private lender",
+      "volume": 0,
+      "cpc": 0,
+      "competition": 0,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P3",
+      "priorityScore": 10
+    },
+    {
+      "keyword": "private money loan documents",
+      "volume": 10,
+      "cpc": 0,
+      "competition": 0,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 11
+    },
+    {
+      "keyword": "private money loan terms",
+      "volume": 10,
+      "cpc": 0,
+      "competition": 0,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 11
+    },
+    {
+      "keyword": "private money lending risks",
+      "volume": 10,
+      "cpc": 0,
+      "competition": 0,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 11
+    },
+    {
+      "keyword": "private lender vs equity partner",
+      "volume": 0,
+      "cpc": 0,
+      "competition": 0,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P3",
+      "priorityScore": 10
+    },
+    {
+      "keyword": "bridge loan vs hard money",
+      "volume": 20,
+      "cpc": 0,
+      "competition": 0.46,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 11.3
+    },
+    {
+      "keyword": "gap funding real estate",
+      "volume": 90,
+      "cpc": 6.81,
+      "competition": 0.7,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P1",
+      "priorityScore": 13.7
+    },
+    {
+      "keyword": "first lien vs second lien",
+      "volume": 210,
+      "cpc": 0,
+      "competition": 0.01,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 12.3
+    },
+    {
+      "keyword": "promissory note vs deed of trust",
+      "volume": 110,
+      "cpc": 0,
+      "competition": 0.01,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 12
+    },
+    {
+      "keyword": "loan to cost vs loan to value",
+      "volume": 110,
+      "cpc": 0.08,
+      "competition": 0.09,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 12.1
+    },
+    {
+      "keyword": "after repair value real estate",
+      "volume": 10,
+      "cpc": 0,
+      "competition": 0.02,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 11
+    },
+    {
+      "keyword": "dscr loan requirements",
+      "volume": 2900,
+      "cpc": 2.77,
+      "competition": 0.66,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P1",
+      "priorityScore": 14.2
+    },
+    {
+      "keyword": "dscr loan vs hard money",
+      "volume": 10,
+      "cpc": 0,
+      "competition": 0,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 11
+    },
+    {
+      "keyword": "real estate buy box",
+      "volume": 70,
+      "cpc": 4.19,
+      "competition": 0.09,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 10.9
+    },
+    {
+      "keyword": "how to analyze a real estate deal",
+      "volume": 50,
+      "cpc": 1.88,
+      "competition": 0.4,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P3",
+      "priorityScore": 10.2
+    },
+    {
+      "keyword": "fix and flip deal analysis",
+      "volume": 0,
+      "cpc": 0,
+      "competition": 0,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P3",
+      "priorityScore": 8
+    },
+    {
+      "keyword": "wholesale real estate deal analysis",
+      "volume": 0,
+      "cpc": 0,
+      "competition": 0,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P3",
+      "priorityScore": 8
+    },
+    {
+      "keyword": "rental property analysis",
+      "volume": 170,
+      "cpc": 2.62,
+      "competition": 0.41,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 10.9
+    },
+    {
+      "keyword": "cap rate vs cash on cash return",
+      "volume": 260,
+      "cpc": 0.05,
+      "competition": 0.07,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P3",
+      "priorityScore": 10.4
+    },
+    {
+      "keyword": "70 percent rule real estate",
+      "volume": 30,
+      "cpc": 0.04,
+      "competition": 0.29,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P3",
+      "priorityScore": 9.5
+    },
+    {
+      "keyword": "real estate due diligence checklist",
+      "volume": 210,
+      "cpc": 0.51,
+      "competition": 0.07,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 10.5
+    },
+    {
+      "keyword": "real estate exit strategy",
+      "volume": 90,
+      "cpc": 1.85,
+      "competition": 0.05,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P3",
+      "priorityScore": 10.4
+    },
+    {
+      "keyword": "co living investment property",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "researchSource": "Business-fit topic · metric not queried in capped pass · 2026-08-28",
+      "priority": "P3",
+      "priorityScore": 8
+    },
+    {
+      "keyword": "creative financing real estate",
+      "volume": 110,
+      "cpc": 3.53,
+      "competition": 0.52,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 10.9
+    },
+    {
+      "keyword": "seller financing real estate",
+      "volume": 720,
+      "cpc": 0.56,
+      "competition": 0.21,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 11
+    },
+    {
+      "keyword": "subject to real estate",
+      "volume": 1600,
+      "cpc": 2.56,
+      "competition": 0.2,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 11.8
+    },
+    {
+      "keyword": "subject to vs seller financing",
+      "volume": 0,
+      "cpc": 0,
+      "competition": 0,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P3",
+      "priorityScore": 8
+    },
+    {
+      "keyword": "brrrr method",
+      "volume": 8100,
+      "cpc": 0.03,
+      "competition": 0.16,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 11.9
+    },
+    {
+      "keyword": "short term vs long term rental",
+      "volume": 320,
+      "cpc": 0.07,
+      "competition": 0.09,
+      "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+      "priority": "P2",
+      "priorityScore": 10.5
+    },
+    {
+      "keyword": "creative finance deal structure checklist",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "researchSource": "Business-fit topic · metric not queried in capped pass · 2026-08-28",
+      "priority": "P3",
+      "priorityScore": 8
+    }
+  ]
+}

@@ -1,0 +1,1502 @@
+[
+  {
+    "id": 1,
+    "keyword": "earnest money deposit",
+    "title": "Earnest Money Deposits: A Practical Guide for Real Estate Investors",
+    "slug": "earnest-money-deposit-guide",
+    "cluster": "Earnest money",
+    "intent": "Learn",
+    "funnel": "Awareness",
+    "audience": "Buyers and newer investors learning contract fundamentals",
+    "cta": "Discuss an EMD scenario",
+    "ownerUrl": "/blog/earnest-money-deposit-guide/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-09-08",
+    "volume": 27100,
+    "cpc": 0.02,
+    "competition": 0.06,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P1",
+    "priorityScore": 14.4,
+    "brief": {
+      "shortAnswer": "An earnest money deposit is money delivered under a purchase agreement to show that a buyer intends to perform. The contract controls when it is due, who holds it, when it is credited at closing, and when either party may claim it.",
+      "mustCover": [
+        "the deposit deadline and delivery method written in the contract",
+        "the escrow holder and release instructions",
+        "the contingencies and default language that determine whether funds are returned"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 2,
+    "keyword": "is earnest money refundable",
+    "title": "Is Earnest Money Refundable? Start With the Contract",
+    "slug": "is-earnest-money-refundable",
+    "cluster": "Earnest money",
+    "intent": "Solve",
+    "funnel": "Consideration",
+    "audience": "Buyers deciding whether a deposit is exposed",
+    "cta": "Discuss an EMD scenario",
+    "ownerUrl": "/blog/is-earnest-money-refundable/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-09-10",
+    "volume": 1900,
+    "cpc": 0.03,
+    "competition": 0.03,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P1",
+    "priorityScore": 13.3,
+    "brief": {
+      "shortAnswer": "Earnest money may be refundable when a buyer terminates within a valid contingency or another contractual right. It may become nonrefundable after a deadline, waiver, or default. The signed agreement and applicable law—not a general rule—control the result.",
+      "mustCover": [
+        "which contingencies remain open",
+        "the exact notice and delivery requirements for termination",
+        "whether the parties dispute the escrow agent’s authority to release funds"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 3,
+    "keyword": "when is earnest money due",
+    "title": "When Is Earnest Money Due in a Real Estate Deal?",
+    "slug": "when-is-earnest-money-due",
+    "cluster": "Earnest money",
+    "intent": "Solve",
+    "funnel": "Consideration",
+    "audience": "Buyers and wholesalers managing a contract deadline",
+    "cta": "Discuss an EMD scenario",
+    "ownerUrl": "/blog/when-is-earnest-money-due/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-09-15",
+    "volume": 480,
+    "cpc": 0.02,
+    "competition": 0.03,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 12.7,
+    "brief": {
+      "shortAnswer": "Earnest money is due when the purchase agreement says it is due. Some contracts require delivery with the offer; others allow a stated number of days after acceptance. Investors should calendar the precise deadline and confirm receipt in writing.",
+      "mustCover": [
+        "the event that starts the deadline",
+        "weekends, holidays, wire cutoffs, and delivery instructions",
+        "written confirmation from the closing or escrow professional"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 4,
+    "keyword": "what happens if earnest money is late",
+    "title": "What Happens If Earnest Money Is Late?",
+    "slug": "what-happens-if-earnest-money-is-late",
+    "cluster": "Earnest money",
+    "intent": "Solve",
+    "funnel": "Decision",
+    "audience": "Buyers facing a missed or uncertain deposit deadline",
+    "cta": "Discuss an EMD scenario",
+    "ownerUrl": "/blog/what-happens-if-earnest-money-is-late/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-09-17",
+    "volume": 0,
+    "cpc": 0,
+    "competition": 0,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P3",
+    "priorityScore": 10,
+    "brief": {
+      "shortAnswer": "A late earnest money deposit can create a contract-default issue, weaken the buyer’s position, or give the seller rights described in the agreement. The outcome depends on the signed contract, local law, and what the parties do next.",
+      "mustCover": [
+        "whether the deadline actually expired",
+        "any notice-and-cure language",
+        "immediate communication with the closing professional and legal counsel"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 5,
+    "keyword": "earnest money vs down payment",
+    "title": "Earnest Money vs. Down Payment: What Changes and When?",
+    "slug": "earnest-money-vs-down-payment",
+    "cluster": "Earnest money",
+    "intent": "Compare",
+    "funnel": "Awareness",
+    "audience": "Buyers separating contract deposits from acquisition capital",
+    "cta": "Discuss an EMD scenario",
+    "ownerUrl": "/blog/earnest-money-vs-down-payment/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-09-22",
+    "volume": 320,
+    "cpc": 0.04,
+    "competition": 0.03,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 12.5,
+    "brief": {
+      "shortAnswer": "Earnest money is a contract deposit delivered before closing; a down payment is the buyer’s equity contribution to the purchase at closing. Earnest money is often credited toward closing funds, but the contract and settlement statement determine the treatment.",
+      "mustCover": [
+        "when each amount is paid",
+        "where the funds are held",
+        "how the deposit appears on the closing statement"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 6,
+    "keyword": "option fee vs earnest money",
+    "title": "Option Fee vs. Earnest Money: Two Different Contract Tools",
+    "slug": "option-fee-vs-earnest-money",
+    "cluster": "Earnest money",
+    "intent": "Compare",
+    "funnel": "Awareness",
+    "audience": "Investors evaluating contract consideration and termination rights",
+    "cta": "Discuss an EMD scenario",
+    "ownerUrl": "/blog/option-fee-vs-earnest-money/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-09-24",
+    "volume": 90,
+    "cpc": 0,
+    "competition": 0.02,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 12,
+    "brief": {
+      "shortAnswer": "An option fee generally purchases a defined contractual right, while earnest money is a deposit tied to performance under the purchase agreement. The names and legal effects vary by jurisdiction, so the document matters more than the label.",
+      "mustCover": [
+        "what right the fee purchases",
+        "whether either payment is refundable or credited",
+        "state-specific forms and deadlines"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 7,
+    "keyword": "who holds earnest money",
+    "title": "Who Holds Earnest Money Before Closing?",
+    "slug": "who-holds-earnest-money",
+    "cluster": "Earnest money",
+    "intent": "Learn",
+    "funnel": "Awareness",
+    "audience": "Buyers who want to verify where deposit funds go",
+    "cta": "Discuss an EMD scenario",
+    "ownerUrl": "/blog/who-holds-earnest-money/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-09-29",
+    "volume": 110,
+    "cpc": 0,
+    "competition": 0.03,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 12,
+    "brief": {
+      "shortAnswer": "Earnest money is commonly held by a named escrow agent, title company, closing attorney, broker trust account, or another party authorized by the contract and local rules. A buyer should never assume wiring instructions are legitimate without independent verification.",
+      "mustCover": [
+        "the holder named in the signed agreement",
+        "fraud-resistant verification of wire instructions",
+        "the receipt and written escrow record"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 8,
+    "keyword": "when can seller keep earnest money",
+    "title": "When Can a Seller Keep Earnest Money?",
+    "slug": "when-can-seller-keep-earnest-money",
+    "cluster": "Earnest money",
+    "intent": "Solve",
+    "funnel": "Consideration",
+    "audience": "Investors assessing deposit-loss scenarios",
+    "cta": "Discuss an EMD scenario",
+    "ownerUrl": "/blog/when-can-seller-keep-earnest-money/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-10-01",
+    "volume": 140,
+    "cpc": 0.02,
+    "competition": 0.04,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 12.2,
+    "brief": {
+      "shortAnswer": "A seller may have a claim to earnest money after a buyer default or another event defined in the contract. Whether the seller actually receives it can depend on notice, cure rights, escrow instructions, dispute procedures, and applicable law.",
+      "mustCover": [
+        "the default and liquidated-damages language",
+        "whether a valid contingency protected the buyer",
+        "the procedure the escrow holder must follow when parties disagree"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 9,
+    "keyword": "earnest money commercial real estate",
+    "title": "Earnest Money in Commercial Real Estate Deals",
+    "slug": "earnest-money-commercial-real-estate",
+    "cluster": "Earnest money",
+    "intent": "Learn",
+    "funnel": "Consideration",
+    "audience": "Commercial buyers managing larger deposits and longer diligence",
+    "cta": "Discuss an EMD scenario",
+    "ownerUrl": "/blog/earnest-money-commercial-real-estate/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-10-06",
+    "volume": 30,
+    "cpc": 0,
+    "competition": 0.05,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 11.5,
+    "brief": {
+      "shortAnswer": "Commercial real estate deposits are negotiated deal terms that may change as due diligence progresses. Investors should model the amount, refundability, release schedule, extension rights, and closing conditions as part of the acquisition plan.",
+      "mustCover": [
+        "soft versus hard deposit milestones",
+        "due-diligence extensions and additional deposits",
+        "the liquidity cost of capital sitting in escrow"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 10,
+    "keyword": "what is transactional funding",
+    "title": "What Is Transactional Funding in Real Estate?",
+    "slug": "what-is-transactional-funding",
+    "cluster": "Transactional funding",
+    "intent": "Learn",
+    "funnel": "Awareness",
+    "audience": "Wholesalers and investors comparing very short-term capital",
+    "cta": "Submit a transactional funding request",
+    "ownerUrl": "/blog/what-is-transactional-funding/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-10-08",
+    "volume": 90,
+    "cpc": 0.26,
+    "competition": 0.17,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 12,
+    "brief": {
+      "shortAnswer": "Transactional funding is short-duration capital used to complete one closing when a related exit or second closing is expected shortly afterward. The funder evaluates the documents, title path, timing, and repayment source rather than treating it like long-term acquisition debt.",
+      "mustCover": [
+        "the A-B acquisition and B-C exit",
+        "control of closing funds and settlement statements",
+        "what happens if the second transaction is delayed or fails"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 11,
+    "keyword": "assignment vs double close",
+    "title": "Assignment vs. Double Close: How Wholesalers Choose",
+    "slug": "assignment-vs-double-close",
+    "cluster": "Transactional funding",
+    "intent": "Compare",
+    "funnel": "Consideration",
+    "audience": "Wholesalers choosing a disposition structure",
+    "cta": "Submit a transactional funding request",
+    "ownerUrl": "/blog/assignment-vs-double-close/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-10-13",
+    "volume": 0,
+    "cpc": 0,
+    "competition": 0,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P3",
+    "priorityScore": 10,
+    "brief": {
+      "shortAnswer": "An assignment transfers contractual rights to an end buyer, while a double close uses two separate purchase transactions. The right structure depends on the contract, local rules, disclosure requirements, economics, title coordination, and the parties involved.",
+      "mustCover": [
+        "whether assignment is allowed and acceptable to the parties",
+        "the closing costs and funding needed for two settlements",
+        "required disclosures and professional guidance"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 12,
+    "keyword": "double close timeline",
+    "title": "A Double-Close Timeline From Contract to Two Settlements",
+    "slug": "double-close-timeline",
+    "cluster": "Transactional funding",
+    "intent": "Learn",
+    "funnel": "Decision",
+    "audience": "Wholesalers coordinating an A-B and B-C closing",
+    "cta": "Submit a transactional funding request",
+    "ownerUrl": "/blog/double-close-timeline/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-10-15",
+    "volume": 0,
+    "cpc": 0,
+    "competition": 0,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P3",
+    "priorityScore": 10,
+    "brief": {
+      "shortAnswer": "A double close requires two coordinated transactions: the original seller transfers to the investor, then the investor transfers to the end buyer. The title team, funder, contracts, settlement statements, and wire timing must align before either closing is treated as ready.",
+      "mustCover": [
+        "title and payoff work for the A-B closing",
+        "end-buyer funds and conditions for the B-C closing",
+        "wire cutoffs, recording order, and contingency time"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 13,
+    "keyword": "double close closing costs",
+    "title": "What Costs Belong in a Double-Close Analysis?",
+    "slug": "double-close-closing-costs",
+    "cluster": "Transactional funding",
+    "intent": "Learn",
+    "funnel": "Consideration",
+    "audience": "Wholesalers testing whether a double close still works",
+    "cta": "Submit a transactional funding request",
+    "ownerUrl": "/blog/double-close-closing-costs/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-10-20",
+    "volume": 0,
+    "cpc": 0,
+    "competition": 0,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P3",
+    "priorityScore": 10,
+    "brief": {
+      "shortAnswer": "A double close can create costs on both transactions, including title or attorney charges, transfer or recording charges, transactional funding fees, wire fees, and other settlement items. The investor should model actual written estimates rather than a generic percentage.",
+      "mustCover": [
+        "two settlement statements instead of one",
+        "funding charges tied to amount and duration",
+        "tax, recording, title, and local transaction costs"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 14,
+    "keyword": "transactional funding document checklist",
+    "title": "Transactional Funding Document Checklist",
+    "slug": "transactional-funding-document-checklist",
+    "cluster": "Transactional funding",
+    "intent": "Solve",
+    "funnel": "Decision",
+    "audience": "Borrowers preparing a fundable closing file",
+    "cta": "Submit a transactional funding request",
+    "ownerUrl": "/blog/transactional-funding-document-checklist/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-10-22",
+    "volume": 0,
+    "cpc": 0,
+    "competition": 0,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P3",
+    "priorityScore": 10,
+    "brief": {
+      "shortAnswer": "A complete transactional funding file usually starts with signed contracts, property and entity details, title or closing contacts, settlement timing, the exit transaction, and a clear repayment explanation. Every funder can require additional documentation.",
+      "mustCover": [
+        "fully executed A-B and B-C documents",
+        "entity, identity, title, and closing information",
+        "a concise sources-and-uses summary with the repayment event"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 15,
+    "keyword": "transactional funding vs hard money",
+    "title": "Transactional Funding vs. Hard Money",
+    "slug": "transactional-funding-vs-hard-money",
+    "cluster": "Transactional funding",
+    "intent": "Compare",
+    "funnel": "Consideration",
+    "audience": "Investors matching capital to a deal timeline",
+    "cta": "Submit a transactional funding request",
+    "ownerUrl": "/blog/transactional-funding-vs-hard-money/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-10-27",
+    "volume": 0,
+    "cpc": 0,
+    "competition": 0,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P3",
+    "priorityScore": 10,
+    "brief": {
+      "shortAnswer": "Transactional funding is designed for a very short, linked closing sequence. Hard money is generally acquisition or bridge debt held for a longer business plan. Comparing only the rate misses term length, fees, collateral, draws, recourse, and exit requirements.",
+      "mustCover": [
+        "the intended hold period",
+        "whether renovation or operating time is required",
+        "the all-in cost and consequences of an extension"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 16,
+    "keyword": "proof of funds real estate",
+    "title": "Proof of Funds in Real Estate: What It Shows—and What It Does Not",
+    "slug": "proof-of-funds-real-estate",
+    "cluster": "Transactional funding",
+    "intent": "Learn",
+    "funnel": "Awareness",
+    "audience": "Buyers and wholesalers preparing offers",
+    "cta": "Submit a transactional funding request",
+    "ownerUrl": "/blog/proof-of-funds-real-estate/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-10-29",
+    "volume": 480,
+    "cpc": 1.8,
+    "competition": 0.17,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P1",
+    "priorityScore": 13.1,
+    "brief": {
+      "shortAnswer": "Proof of funds is evidence that a buyer has access to money for a transaction. It does not replace underwriting, guarantee closing, or prove that every condition has been satisfied. Sellers and closing professionals may ask how the funds are controlled and used.",
+      "mustCover": [
+        "the amount and date shown",
+        "the institution or capital source behind the letter",
+        "whether the proof matches the buyer, property, and intended closing structure"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 17,
+    "keyword": "a b c transaction real estate",
+    "title": "A-B and B-C Real Estate Transactions Explained",
+    "slug": "abc-real-estate-transaction",
+    "cluster": "Transactional funding",
+    "intent": "Learn",
+    "funnel": "Awareness",
+    "audience": "New wholesalers learning double-close terminology",
+    "cta": "Submit a transactional funding request",
+    "ownerUrl": "/blog/abc-real-estate-transaction/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-11-03",
+    "volume": 0,
+    "cpc": 0,
+    "competition": 0,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P3",
+    "priorityScore": 10,
+    "brief": {
+      "shortAnswer": "In an A-B/B-C structure, A sells to B and B separately sells to C. Because B participates in two contracts and two settlements, the team must understand ownership, funding, disclosures, title, and the order in which each closing can occur.",
+      "mustCover": [
+        "separate contracts with compatible dates and obligations",
+        "how B acquires title before conveying it",
+        "the funding and recording sequence approved by the closing team"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 18,
+    "keyword": "wholesale real estate closing process",
+    "title": "The Wholesale Real Estate Closing Process",
+    "slug": "wholesale-real-estate-closing-process",
+    "cluster": "Transactional funding",
+    "intent": "Learn",
+    "funnel": "Consideration",
+    "audience": "Wholesalers moving from signed contract to disposition",
+    "cta": "Submit a transactional funding request",
+    "ownerUrl": "/blog/wholesale-real-estate-closing-process/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-11-05",
+    "volume": 0,
+    "cpc": 0,
+    "competition": 0,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P3",
+    "priorityScore": 10,
+    "brief": {
+      "shortAnswer": "A wholesale closing starts with a valid purchase agreement and moves through title review, buyer disposition, document preparation, funding, and settlement. The exact process changes when the contract is assigned versus when the investor completes a double close.",
+      "mustCover": [
+        "contract rights and assignment restrictions",
+        "title issues, liens, payoffs, and closing-party requirements",
+        "end-buyer readiness and the final settlement structure"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 19,
+    "keyword": "private money lending real estate",
+    "title": "How Private Money Lending Works in Real Estate",
+    "slug": "private-money-lending-real-estate",
+    "cluster": "Private lending",
+    "intent": "Learn",
+    "funnel": "Awareness",
+    "audience": "Borrowers and prospective private lenders learning the structure",
+    "cta": "Discuss a private-money request",
+    "ownerUrl": "/blog/private-money-lending-real-estate/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-11-10",
+    "volume": 590,
+    "cpc": 6.42,
+    "competition": 0.7,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P1",
+    "priorityScore": 14.4,
+    "brief": {
+      "shortAnswer": "Private money lending is a negotiated loan between a borrower and a private capital source, often secured by real estate and built around a specific business plan. Terms, underwriting, documentation, servicing, and remedies should be clear before funds move.",
+      "mustCover": [
+        "the borrower, property, use of funds, and repayment source",
+        "the note, security instrument, lien position, and title coverage",
+        "risk tolerance, servicing, reporting, and default procedures"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 20,
+    "keyword": "private money vs hard money",
+    "title": "Private Money vs. Hard Money for Real Estate Investors",
+    "slug": "private-money-vs-hard-money",
+    "cluster": "Private lending",
+    "intent": "Compare",
+    "funnel": "Consideration",
+    "audience": "Investors comparing capital sources",
+    "cta": "Discuss a private-money request",
+    "ownerUrl": "/blog/private-money-vs-hard-money/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-11-12",
+    "volume": 90,
+    "cpc": 3.98,
+    "competition": 0.16,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P1",
+    "priorityScore": 13,
+    "brief": {
+      "shortAnswer": "“Private money” often describes capital from an individual or relationship-based lender, while “hard money” often describes an asset-based lending business. The labels overlap; investors should compare the actual term sheet, underwriting, fees, recourse, draws, and exit rules.",
+      "mustCover": [
+        "who controls and services the loan",
+        "how the property and borrower are underwritten",
+        "the complete economics and extension options"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 21,
+    "keyword": "how to present a deal to a private lender",
+    "title": "How to Present a Real Estate Deal to a Private Lender",
+    "slug": "present-deal-to-private-lender",
+    "cluster": "Private lending",
+    "intent": "Solve",
+    "funnel": "Decision",
+    "audience": "Borrowers seeking a clear capital conversation",
+    "cta": "Discuss a private-money request",
+    "ownerUrl": "/blog/present-deal-to-private-lender/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-11-17",
+    "volume": 0,
+    "cpc": 0,
+    "competition": 0,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P3",
+    "priorityScore": 10,
+    "brief": {
+      "shortAnswer": "A strong lender presentation explains the property, purchase basis, valuation support, budget, borrower experience, capital stack, risks, timeline, and repayment plan. It should make diligence easier without hiding what can go wrong.",
+      "mustCover": [
+        "a one-page deal summary backed by source documents",
+        "uses of funds and borrower cash in the transaction",
+        "base-case and downside exit scenarios"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 22,
+    "keyword": "private money loan documents",
+    "title": "Private Money Loan Documents: A Borrower’s Checklist",
+    "slug": "private-money-loan-documents",
+    "cluster": "Private lending",
+    "intent": "Solve",
+    "funnel": "Decision",
+    "audience": "Borrowers preparing for underwriting and closing",
+    "cta": "Discuss a private-money request",
+    "ownerUrl": "/blog/private-money-loan-documents/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-11-19",
+    "volume": 10,
+    "cpc": 0,
+    "competition": 0,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 11,
+    "brief": {
+      "shortAnswer": "Private real estate loans require more than a handshake. The file may include an application, entity records, purchase contract, valuation, scope and budget, title work, insurance, a promissory note, security documents, guarantees, and closing instructions.",
+      "mustCover": [
+        "documents that establish the borrower and entity",
+        "documents that support value, budget, and exit",
+        "loan and collateral documents prepared for the jurisdiction"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 23,
+    "keyword": "private money loan terms",
+    "title": "Private Money Loan Terms Investors Should Compare",
+    "slug": "private-money-loan-terms",
+    "cluster": "Private lending",
+    "intent": "Compare",
+    "funnel": "Consideration",
+    "audience": "Borrowers comparing term sheets",
+    "cta": "Discuss a private-money request",
+    "ownerUrl": "/blog/private-money-loan-terms/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-11-24",
+    "volume": 10,
+    "cpc": 0,
+    "competition": 0,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 11,
+    "brief": {
+      "shortAnswer": "A private loan term sheet should be evaluated as a system: principal, interest, points and fees, term, payments, draws, reserves, collateral, lien position, recourse, extension rights, default terms, and exit requirements all affect the deal.",
+      "mustCover": [
+        "all-in cost rather than the stated rate alone",
+        "cash timing for fees, interest, and construction draws",
+        "extension, default, prepayment, and payoff mechanics"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 24,
+    "keyword": "private money lending risks",
+    "title": "Private Money Lending Risks: A Due-Diligence Framework",
+    "slug": "private-money-lending-risks",
+    "cluster": "Private lending",
+    "intent": "Learn",
+    "funnel": "Consideration",
+    "audience": "Prospective lenders evaluating a real estate-backed loan",
+    "cta": "Discuss a private-money request",
+    "ownerUrl": "/blog/private-money-lending-risks/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-11-26",
+    "volume": 10,
+    "cpc": 0,
+    "competition": 0,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 11,
+    "brief": {
+      "shortAnswer": "Private lending can expose capital to property, borrower, title, valuation, construction, market, servicing, legal, and liquidity risk. Collateral does not eliminate loss, and the lender may need time and money to enforce remedies.",
+      "mustCover": [
+        "independent valuation and conservative leverage",
+        "clear lien priority, title, insurance, and documentation",
+        "the borrower’s execution ability and a realistic repayment source"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 25,
+    "keyword": "private lender vs equity partner",
+    "title": "Private Lender vs. Equity Partner in a Real Estate Deal",
+    "slug": "private-lender-vs-equity-partner",
+    "cluster": "Private lending",
+    "intent": "Compare",
+    "funnel": "Consideration",
+    "audience": "Capital providers choosing debt or ownership economics",
+    "cta": "Discuss a private-money request",
+    "ownerUrl": "/blog/private-lender-vs-equity-partner/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-12-01",
+    "volume": 0,
+    "cpc": 0,
+    "competition": 0,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P3",
+    "priorityScore": 10,
+    "brief": {
+      "shortAnswer": "A lender expects repayment under loan documents; an equity partner owns an interest and participates in results under an operating agreement. The return profile, control, tax treatment, downside, priority, and legal rights differ materially.",
+      "mustCover": [
+        "payment priority and participation in upside",
+        "decision rights and operational responsibility",
+        "tax, securities, and legal review appropriate to the structure"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 26,
+    "keyword": "bridge loan vs hard money",
+    "title": "Bridge Loan vs. Hard Money: Compare the Actual Structure",
+    "slug": "bridge-loan-vs-hard-money",
+    "cluster": "Private lending",
+    "intent": "Compare",
+    "funnel": "Consideration",
+    "audience": "Investors financing a short business plan",
+    "cta": "Discuss a private-money request",
+    "ownerUrl": "/blog/bridge-loan-vs-hard-money/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-12-03",
+    "volume": 20,
+    "cpc": 0,
+    "competition": 0.46,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 11.3,
+    "brief": {
+      "shortAnswer": "Bridge loans and hard-money loans can both provide short-term real estate capital. “Bridge” describes the timing purpose; “hard money” often describes the underwriting model. A specific loan can be both, so the documents matter more than the category.",
+      "mustCover": [
+        "the event being bridged and expected payoff date",
+        "leverage, reserves, draws, and recourse",
+        "extension availability if the business plan takes longer"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 27,
+    "keyword": "gap funding real estate",
+    "title": "What Is Gap Funding in Real Estate?",
+    "slug": "gap-funding-real-estate",
+    "cluster": "Private lending",
+    "intent": "Learn",
+    "funnel": "Consideration",
+    "audience": "Investors filling a defined hole in the capital stack",
+    "cta": "Discuss a private-money request",
+    "ownerUrl": "/blog/gap-funding-real-estate/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-12-08",
+    "volume": 90,
+    "cpc": 6.81,
+    "competition": 0.7,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P1",
+    "priorityScore": 13.7,
+    "brief": {
+      "shortAnswer": "Gap funding is supplemental capital used between the borrower’s available cash and the amount provided by a senior lender or other source. It may cover part of a down payment, closing costs, rehab, or another documented need, but it adds cost and structural complexity.",
+      "mustCover": [
+        "where the gap sits in the capital stack",
+        "whether the senior lender permits subordinate or outside capital",
+        "combined leverage and the repayment priority of each source"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 28,
+    "keyword": "first lien vs second lien",
+    "title": "First Lien vs. Second Lien in Real Estate Lending",
+    "slug": "first-lien-vs-second-lien",
+    "cluster": "Private lending",
+    "intent": "Compare",
+    "funnel": "Awareness",
+    "audience": "Borrowers and lenders evaluating priority",
+    "cta": "Discuss a private-money request",
+    "ownerUrl": "/blog/first-lien-vs-second-lien/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-12-10",
+    "volume": 210,
+    "cpc": 0,
+    "competition": 0.01,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 12.3,
+    "brief": {
+      "shortAnswer": "Lien position generally affects payment priority against collateral. A first-position lien is ahead of a second-position lien, but priority can depend on recording, agreements, taxes, other claims, and local law. Position changes risk; it does not guarantee recovery.",
+      "mustCover": [
+        "the complete title and lien picture",
+        "intercreditor or subordination terms",
+        "combined leverage and downside value"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 29,
+    "keyword": "promissory note vs deed of trust",
+    "title": "Promissory Note vs. Deed of Trust",
+    "slug": "promissory-note-vs-deed-of-trust",
+    "cluster": "Private lending",
+    "intent": "Compare",
+    "funnel": "Awareness",
+    "audience": "Borrowers learning core loan documents",
+    "cta": "Discuss a private-money request",
+    "ownerUrl": "/blog/promissory-note-vs-deed-of-trust/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-12-15",
+    "volume": 110,
+    "cpc": 0,
+    "competition": 0.01,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 12,
+    "brief": {
+      "shortAnswer": "A promissory note states the debt obligation and repayment terms. A deed of trust or mortgage creates a security interest in real property, subject to state law and proper execution and recording. They work together but do different jobs.",
+      "mustCover": [
+        "the payment promise in the note",
+        "the collateral rights in the security instrument",
+        "state-specific signing, notarization, and recording requirements"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 30,
+    "keyword": "loan to cost vs loan to value",
+    "title": "Loan-to-Cost vs. Loan-to-Value for Real Estate Deals",
+    "slug": "loan-to-cost-vs-loan-to-value",
+    "cluster": "Private lending",
+    "intent": "Compare",
+    "funnel": "Consideration",
+    "audience": "Investors interpreting leverage limits",
+    "cta": "Discuss a private-money request",
+    "ownerUrl": "/blog/loan-to-cost-vs-loan-to-value/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-12-17",
+    "volume": 110,
+    "cpc": 0.08,
+    "competition": 0.09,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 12.1,
+    "brief": {
+      "shortAnswer": "Loan-to-cost compares the loan to total project cost; loan-to-value compares it to a property value measure. A lender may constrain both. Investors should confirm which value, which costs, and which point in the project the calculation uses.",
+      "mustCover": [
+        "purchase price, rehab, and eligible cost definitions",
+        "as-is value versus completed or stabilized value",
+        "the lower leverage result when multiple limits apply"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 31,
+    "keyword": "after repair value real estate",
+    "title": "After-Repair Value: How Investors Should Use ARV",
+    "slug": "after-repair-value-real-estate",
+    "cluster": "Private lending",
+    "intent": "Learn",
+    "funnel": "Consideration",
+    "audience": "Fix-and-flip investors and lenders reviewing completed value",
+    "cta": "Discuss a private-money request",
+    "ownerUrl": "/blog/after-repair-value-real-estate/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-12-22",
+    "volume": 10,
+    "cpc": 0,
+    "competition": 0.02,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 11,
+    "brief": {
+      "shortAnswer": "After-repair value is an estimate of a property’s market value after a defined renovation is complete. It is only as reliable as the scope, comparable sales, adjustments, timing, and market assumptions behind it.",
+      "mustCover": [
+        "comparable properties that match the finished product",
+        "a rehab scope consistent with the assumed condition",
+        "sensitivity if price, timing, or scope changes"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 32,
+    "keyword": "dscr loan requirements",
+    "title": "DSCR Loan Requirements: What Rental Investors Should Prepare",
+    "slug": "dscr-loan-requirements",
+    "cluster": "Private lending",
+    "intent": "Learn",
+    "funnel": "Decision",
+    "audience": "Rental investors preparing for lender screening",
+    "cta": "Discuss a private-money request",
+    "ownerUrl": "/blog/dscr-loan-requirements/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-12-24",
+    "volume": 2900,
+    "cpc": 2.77,
+    "competition": 0.66,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P1",
+    "priorityScore": 14.2,
+    "brief": {
+      "shortAnswer": "DSCR loan programs generally focus on whether property income supports required debt service, alongside credit, liquidity, property, entity, valuation, and program rules. Requirements differ by lender and scenario, so a current term sheet is essential.",
+      "mustCover": [
+        "rent and operating assumptions used in the DSCR calculation",
+        "credit, liquidity, reserves, and entity documentation",
+        "property eligibility, valuation, insurance, and prepayment terms"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 33,
+    "keyword": "dscr loan vs hard money",
+    "title": "DSCR Loan vs. Hard Money for a Rental Property",
+    "slug": "dscr-loan-vs-hard-money",
+    "cluster": "Private lending",
+    "intent": "Compare",
+    "funnel": "Decision",
+    "audience": "Investors choosing acquisition, rehab, or permanent rental capital",
+    "cta": "Discuss a private-money request",
+    "ownerUrl": "/blog/dscr-loan-vs-hard-money/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-12-29",
+    "volume": 10,
+    "cpc": 0,
+    "competition": 0,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 11,
+    "brief": {
+      "shortAnswer": "A DSCR loan is commonly used for stabilized rental debt based substantially on property cash flow. Hard money is commonly used for faster acquisition, renovation, or transition. The property’s current condition and the investor’s next milestone drive the fit.",
+      "mustCover": [
+        "whether the property is stabilized and producing supportable rent",
+        "the renovation and seasoning timeline",
+        "long-term payment, prepayment, and refinance economics"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 34,
+    "keyword": "real estate buy box",
+    "title": "How to Build a Real Estate Buy Box That Improves Decisions",
+    "slug": "real-estate-buy-box",
+    "cluster": "Deal analysis",
+    "intent": "Solve",
+    "funnel": "Consideration",
+    "audience": "Investors and wholesalers defining acquisition criteria",
+    "cta": "Review a real estate opportunity",
+    "ownerUrl": "/blog/real-estate-buy-box/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2026-12-31",
+    "volume": 70,
+    "cpc": 4.19,
+    "competition": 0.09,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 10.9,
+    "brief": {
+      "shortAnswer": "A real estate buy box is a written set of acquisition criteria that helps a team reject weak opportunities quickly and evaluate promising ones consistently. It should connect market, property, price, condition, strategy, return, risk, and financing.",
+      "mustCover": [
+        "markets, neighborhoods, property types, and physical limits",
+        "purchase basis, rehab tolerance, and return thresholds",
+        "deal breakers, evidence standards, and who can approve exceptions"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 35,
+    "keyword": "how to analyze a real estate deal",
+    "title": "How to Analyze a Real Estate Deal Before You Commit",
+    "slug": "analyze-real-estate-deal",
+    "cluster": "Deal analysis",
+    "intent": "Learn",
+    "funnel": "Consideration",
+    "audience": "Investors building a repeatable underwriting process",
+    "cta": "Review a real estate opportunity",
+    "ownerUrl": "/blog/analyze-real-estate-deal/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2027-01-05",
+    "volume": 50,
+    "cpc": 1.88,
+    "competition": 0.4,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P3",
+    "priorityScore": 10.2,
+    "brief": {
+      "shortAnswer": "A useful deal analysis connects purchase price, condition, financing, operating income, expenses, timeline, exit value, transaction costs, and downside cases. The point is not to make a spreadsheet look precise; it is to expose the assumptions that control the outcome.",
+      "mustCover": [
+        "source documents for price, rent, expenses, and condition",
+        "capital needs and timing from contract through exit",
+        "base, downside, and break-even scenarios"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 36,
+    "keyword": "fix and flip deal analysis",
+    "title": "Fix-and-Flip Deal Analysis: From Purchase to Net Proceeds",
+    "slug": "fix-and-flip-deal-analysis",
+    "cluster": "Deal analysis",
+    "intent": "Solve",
+    "funnel": "Decision",
+    "audience": "Flippers checking margin before closing",
+    "cta": "Review a real estate opportunity",
+    "ownerUrl": "/blog/fix-and-flip-deal-analysis/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2027-01-07",
+    "volume": 0,
+    "cpc": 0,
+    "competition": 0,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P3",
+    "priorityScore": 8,
+    "brief": {
+      "shortAnswer": "A fix-and-flip analysis should model acquisition, financing, renovation, carrying costs, selling costs, schedule, and a defensible resale value. A healthy-looking gross spread can disappear when time, scope, or disposition assumptions move.",
+      "mustCover": [
+        "a detailed scope with labor, materials, permits, and contingency",
+        "monthly carry and financing costs across a realistic schedule",
+        "net sale proceeds after commissions, concessions, taxes, and payoff"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 37,
+    "keyword": "wholesale real estate deal analysis",
+    "title": "Wholesale Deal Analysis: What Makes a Contract Marketable?",
+    "slug": "wholesale-real-estate-deal-analysis",
+    "cluster": "Deal analysis",
+    "intent": "Solve",
+    "funnel": "Decision",
+    "audience": "Wholesalers screening contracts before disposition",
+    "cta": "Review a real estate opportunity",
+    "ownerUrl": "/blog/wholesale-real-estate-deal-analysis/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2027-01-12",
+    "volume": 0,
+    "cpc": 0,
+    "competition": 0,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P3",
+    "priorityScore": 8,
+    "brief": {
+      "shortAnswer": "A wholesale deal is marketable when an end buyer can verify a credible spread after purchase, repairs, financing, holding, and resale or rental assumptions. Wholesalers should underwrite for the buyer’s economics, not only the desired assignment fee.",
+      "mustCover": [
+        "clear contract rights and access for diligence",
+        "defensible condition, repair, value, and rent evidence",
+        "enough margin for the end buyer after every material cost"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 38,
+    "keyword": "rental property analysis",
+    "title": "Rental Property Analysis Beyond the Monthly Rent",
+    "slug": "rental-property-analysis",
+    "cluster": "Deal analysis",
+    "intent": "Learn",
+    "funnel": "Consideration",
+    "audience": "Buy-and-hold investors comparing opportunities",
+    "cta": "Review a real estate opportunity",
+    "ownerUrl": "/blog/rental-property-analysis/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2027-01-14",
+    "volume": 170,
+    "cpc": 2.62,
+    "competition": 0.41,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 10.9,
+    "brief": {
+      "shortAnswer": "Rental property analysis should include realistic collected rent, vacancy, operating expenses, reserves, financing, capital expenditures, management, and exit assumptions. Gross rent alone does not show cash flow or risk.",
+      "mustCover": [
+        "market rent supported by comparable leases or current operations",
+        "full operating expenses and replacement reserves",
+        "debt service, liquidity needs, and downside occupancy"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 39,
+    "keyword": "cap rate vs cash on cash return",
+    "title": "Cap Rate vs. Cash-on-Cash Return",
+    "slug": "cap-rate-vs-cash-on-cash-return",
+    "cluster": "Deal analysis",
+    "intent": "Compare",
+    "funnel": "Awareness",
+    "audience": "Investors comparing property performance metrics",
+    "cta": "Review a real estate opportunity",
+    "ownerUrl": "/blog/cap-rate-vs-cash-on-cash-return/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2027-01-19",
+    "volume": 260,
+    "cpc": 0.05,
+    "competition": 0.07,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P3",
+    "priorityScore": 10.4,
+    "brief": {
+      "shortAnswer": "Cap rate compares net operating income with property value before financing. Cash-on-cash return compares annual pre-tax cash flow with the cash invested. They answer different questions and can move in different directions when leverage changes.",
+      "mustCover": [
+        "a consistent net operating income calculation",
+        "the actual cash invested at acquisition and stabilization",
+        "how financing changes cash flow without changing property operations"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 40,
+    "keyword": "70 percent rule real estate",
+    "title": "The 70% Rule in Real Estate: Screen, Then Underwrite",
+    "slug": "70-percent-rule-real-estate",
+    "cluster": "Deal analysis",
+    "intent": "Learn",
+    "funnel": "Awareness",
+    "audience": "New investors learning quick deal screens",
+    "cta": "Review a real estate opportunity",
+    "ownerUrl": "/blog/70-percent-rule-real-estate/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2027-01-21",
+    "volume": 30,
+    "cpc": 0.04,
+    "competition": 0.29,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P3",
+    "priorityScore": 9.5,
+    "brief": {
+      "shortAnswer": "The 70% rule is a rough fix-and-flip screening heuristic, not a complete offer formula. Market conditions, financing, scope, selling costs, taxes, hold time, and required profit can make the shortcut too aggressive or too conservative.",
+      "mustCover": [
+        "the assumptions hidden inside the percentage",
+        "local resale and transaction-cost conditions",
+        "a full project model before making a binding commitment"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 41,
+    "keyword": "real estate due diligence checklist",
+    "title": "Real Estate Due Diligence Checklist for Investors",
+    "slug": "real-estate-due-diligence-checklist",
+    "cluster": "Deal analysis",
+    "intent": "Solve",
+    "funnel": "Decision",
+    "audience": "Investors organizing a contract review period",
+    "cta": "Review a real estate opportunity",
+    "ownerUrl": "/blog/real-estate-due-diligence-checklist/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2027-01-26",
+    "volume": 210,
+    "cpc": 0.51,
+    "competition": 0.07,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 10.5,
+    "brief": {
+      "shortAnswer": "Investor due diligence should connect title, survey, zoning and use, physical condition, environmental issues, leases, income, expenses, insurance, financing, entity, contracts, and the exit plan. The right checklist changes by property and jurisdiction.",
+      "mustCover": [
+        "legal and title rights to acquire and operate the property",
+        "physical and financial facts that support the underwriting",
+        "closing conditions, financing, insurance, and a documented go/no-go decision"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 42,
+    "keyword": "real estate exit strategy",
+    "title": "Real Estate Exit Strategies: Choose Before You Close",
+    "slug": "real-estate-exit-strategy",
+    "cluster": "Deal analysis",
+    "intent": "Learn",
+    "funnel": "Consideration",
+    "audience": "Investors matching acquisition terms to an outcome",
+    "cta": "Review a real estate opportunity",
+    "ownerUrl": "/blog/real-estate-exit-strategy/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2027-01-28",
+    "volume": 90,
+    "cpc": 1.85,
+    "competition": 0.05,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P3",
+    "priorityScore": 10.4,
+    "brief": {
+      "shortAnswer": "An exit strategy explains how capital is repaid and value is realized: sale, assignment, refinance, stabilization, long-term hold, or another documented path. Strong deals also define a fallback when the preferred exit is delayed or unavailable.",
+      "mustCover": [
+        "the primary exit and the evidence supporting it",
+        "the capital and time needed to reach that exit",
+        "one or more fallback paths with trigger points"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 43,
+    "keyword": "co living investment property",
+    "title": "Co-Living as an Investment Property Strategy",
+    "slug": "co-living-investment-property",
+    "cluster": "Deal analysis",
+    "intent": "Learn",
+    "funnel": "Consideration",
+    "audience": "Rental investors evaluating room-based housing operations",
+    "cta": "Review a real estate opportunity",
+    "ownerUrl": "/blog/co-living-investment-property/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2027-02-02",
+    "volume": null,
+    "cpc": null,
+    "competition": null,
+    "researchSource": "Business-fit topic · metric not queried in capped pass · 2026-08-28",
+    "priority": "P3",
+    "priorityScore": 8,
+    "brief": {
+      "shortAnswer": "Co-living can increase gross revenue by renting private rooms with shared common areas, but it also changes management, turnover, utilities, furnishing, parking, occupancy, licensing, insurance, and resident-experience requirements. The operating model must fit the property and local rules.",
+      "mustCover": [
+        "local occupancy, zoning, leasing, and licensing constraints",
+        "room-level demand and operating workload",
+        "utilities, furnishing, management, turnover, and common-area costs"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 44,
+    "keyword": "creative financing real estate",
+    "title": "Creative Financing in Real Estate: Start With the Problem",
+    "slug": "creative-financing-real-estate",
+    "cluster": "Creative acquisition",
+    "intent": "Learn",
+    "funnel": "Awareness",
+    "audience": "Buyers and sellers exploring alternatives to a standard sale",
+    "cta": "Discuss an acquisition structure",
+    "ownerUrl": "/blog/creative-financing-real-estate/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2027-02-04",
+    "volume": 110,
+    "cpc": 3.53,
+    "competition": 0.52,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 10.9,
+    "brief": {
+      "shortAnswer": "Creative financing is a broad term for transaction structures that change how price, debt, equity, payments, control, or timing work. A useful structure solves a specific constraint while making risk and responsibility understandable to every party.",
+      "mustCover": [
+        "the seller’s goals and the buyer’s operating plan",
+        "existing debt, title, insurance, taxes, and transfer restrictions",
+        "payments, maturity, default, exit, and professional review"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 45,
+    "keyword": "seller financing real estate",
+    "title": "Seller Financing in Real Estate: Terms Both Sides Should Understand",
+    "slug": "seller-financing-real-estate",
+    "cluster": "Creative acquisition",
+    "intent": "Learn",
+    "funnel": "Consideration",
+    "audience": "Buyers and sellers evaluating an installment structure",
+    "cta": "Discuss an acquisition structure",
+    "ownerUrl": "/blog/seller-financing-real-estate/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2027-02-09",
+    "volume": 720,
+    "cpc": 0.56,
+    "competition": 0.21,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 11,
+    "brief": {
+      "shortAnswer": "In seller financing, the seller extends credit for some or all of the purchase price under negotiated documents. Price, down payment, interest, amortization, balloon, collateral, servicing, default, taxes, insurance, and transfer timing should be explicit.",
+      "mustCover": [
+        "the payment schedule and maturity or balloon",
+        "the security instrument and lien position",
+        "servicing, insurance, taxes, default, and early payoff rules"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 46,
+    "keyword": "subject to real estate",
+    "title": "Subject-To Real Estate: What the Structure Actually Means",
+    "slug": "subject-to-real-estate",
+    "cluster": "Creative acquisition",
+    "intent": "Learn",
+    "funnel": "Consideration",
+    "audience": "Investors and sellers learning an existing-financing acquisition",
+    "cta": "Discuss an acquisition structure",
+    "ownerUrl": "/blog/subject-to-real-estate/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2027-02-11",
+    "volume": 1600,
+    "cpc": 2.56,
+    "competition": 0.2,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 11.8,
+    "brief": {
+      "shortAnswer": "A subject-to acquisition transfers title while an existing loan remains in place in the seller’s name. The structure can create significant contractual, servicing, insurance, tax, due-on-sale, disclosure, and exit risks that require qualified legal review.",
+      "mustCover": [
+        "the existing loan documents and due-on-sale risk",
+        "title transfer, insurance, taxes, payment servicing, and records",
+        "seller protection and the buyer’s refinance or payoff plan"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 47,
+    "keyword": "subject to vs seller financing",
+    "title": "Subject-To vs. Seller Financing",
+    "slug": "subject-to-vs-seller-financing",
+    "cluster": "Creative acquisition",
+    "intent": "Compare",
+    "funnel": "Consideration",
+    "audience": "Buyers and sellers comparing creative structures",
+    "cta": "Discuss an acquisition structure",
+    "ownerUrl": "/blog/subject-to-vs-seller-financing/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2027-02-16",
+    "volume": 0,
+    "cpc": 0,
+    "competition": 0,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P3",
+    "priorityScore": 8,
+    "brief": {
+      "shortAnswer": "Subject-to typically leaves an existing third-party loan in place after title transfers. Seller financing creates a new debt obligation from buyer to seller. They can sometimes appear in the same capital stack, but their risks and documents are different.",
+      "mustCover": [
+        "who is owed money after closing",
+        "which existing or new liens remain on the property",
+        "payment servicing, maturity, default, insurance, and exit obligations"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 48,
+    "keyword": "brrrr method",
+    "title": "The BRRRR Method: Underwrite Every Transition",
+    "slug": "brrrr-method-real-estate",
+    "cluster": "Creative acquisition",
+    "intent": "Learn",
+    "funnel": "Awareness",
+    "audience": "Investors planning buy-rehab-rent-refinance-repeat projects",
+    "cta": "Discuss an acquisition structure",
+    "ownerUrl": "/blog/brrrr-method-real-estate/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2027-02-18",
+    "volume": 8100,
+    "cpc": 0.03,
+    "competition": 0.16,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 11.9,
+    "brief": {
+      "shortAnswer": "BRRRR stands for buy, rehab, rent, refinance, repeat. The strategy depends on moving successfully through several different risk stages, so acquisition basis, construction, lease-up, valuation, seasoning, and refinance requirements must align.",
+      "mustCover": [
+        "the acquisition and renovation capital through stabilization",
+        "rent, operating expenses, and completed value",
+        "refinance eligibility, proceeds, timing, and cash left in the deal"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 49,
+    "keyword": "short term vs long term rental",
+    "title": "Short-Term vs. Mid-Term vs. Long-Term Rental Strategy",
+    "slug": "short-mid-long-term-rental",
+    "cluster": "Creative acquisition",
+    "intent": "Compare",
+    "funnel": "Consideration",
+    "audience": "Owners choosing an operating model for a property",
+    "cta": "Discuss an acquisition structure",
+    "ownerUrl": "/blog/short-mid-long-term-rental/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2027-02-23",
+    "volume": 320,
+    "cpc": 0.07,
+    "competition": 0.09,
+    "researchSource": "Keywords Everywhere · United States · clickstream + Google Keyword Planner · 2026-08-28",
+    "priority": "P2",
+    "priorityScore": 10.5,
+    "brief": {
+      "shortAnswer": "Short-term, mid-term, and long-term rentals create different demand, turnover, furnishing, management, regulatory, financing, and vacancy profiles. The better model depends on the property, market, rules, capital plan, and the operator’s capacity.",
+      "mustCover": [
+        "local demand, seasonality, and occupancy assumptions for each stay length",
+        "regulation, insurance, financing, utilities, furnishing, and lease requirements",
+        "management workload and full operating costs"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  },
+  {
+    "id": 50,
+    "keyword": "creative finance deal structure checklist",
+    "title": "Creative-Finance Deal Structure Checklist",
+    "slug": "creative-finance-deal-structure-checklist",
+    "cluster": "Creative acquisition",
+    "intent": "Solve",
+    "funnel": "Decision",
+    "audience": "Dealmakers preparing a structured acquisition for review",
+    "cta": "Discuss an acquisition structure",
+    "ownerUrl": "/blog/creative-finance-deal-structure-checklist/",
+    "pageType": "article",
+    "status": "Drafted",
+    "plannedPublishDate": "2027-02-25",
+    "volume": null,
+    "cpc": null,
+    "competition": null,
+    "researchSource": "Business-fit topic · metric not queried in capped pass · 2026-08-28",
+    "priority": "P3",
+    "priorityScore": 8,
+    "brief": {
+      "shortAnswer": "A creative-finance deal should be understandable on one page before documents are drafted: parties, property, price, existing debt, new debt or equity, cash at closing, payments, control, responsibilities, maturity, default, and exits.",
+      "mustCover": [
+        "a complete capital stack and sources-and-uses table",
+        "who owns, owes, controls, insures, maintains, and pays",
+        "maturity, default, transfer, refinance, sale, and fallback paths"
+      ],
+      "humanReview": "Verify legal, tax, lending, securities, state-specific, and Fran Legacy product details before publication."
+    }
+  }
+]

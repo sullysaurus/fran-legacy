@@ -1,0 +1,361 @@
+---
+import queue from '../../seo/keyword-seeds.json';
+import research from '../../seo/keywords-everywhere-research.json';
+import competitorResearch from '../../seo/competitor-research.json';
+import contentState from '../../seo/content-state.json';
+import { getCollection } from 'astro:content';
+
+const drafts = await getCollection('blog');
+const formatter = new Intl.NumberFormat('en-US');
+const compact = new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 });
+const dateLabel = (date: string) => new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${date}T00:00:00Z`));
+const measuredItems = queue.filter((item) => typeof item.volume === 'number');
+const unmeasuredCount = queue.length - measuredItems.length;
+const zeroCount = measuredItems.filter((item) => item.volume === 0).length;
+const modeledDemand = measuredItems.reduce((sum, item) => sum + (item.volume ?? 0), 0);
+const priorityOne = queue.filter((item) => item.priority === 'P1').length;
+const stateItems = Object.values(contentState);
+const competitors = competitorResearch.competitors;
+const maxTraffic = Math.max(...competitors.map((item) => item.sampleTraffic), 1);
+const maxTopTen = Math.max(...competitors.map((item) => item.top10), 1);
+
+const clusterOrder = ['Earnest money', 'Transactional funding', 'Private lending', 'Deal analysis', 'Creative acquisition'];
+const clusterColors = {
+  'Earnest money': '#1e91a8',
+  'Transactional funding': '#748d19',
+  'Private lending': '#b86b20',
+  'Deal analysis': '#695ab2',
+  'Creative acquisition': '#b94f4b',
+} as const;
+const clusterCounts = clusterOrder.map((cluster) => ({
+  cluster,
+  count: queue.filter((item) => item.cluster === cluster).length,
+  color: clusterColors[cluster as keyof typeof clusterColors],
+}));
+
+const competitorMentions = new Map<string, string>();
+for (const competitor of competitors) {
+  for (const term of competitor.topKeywords) competitorMentions.set(term.keyword.toLowerCase(), `${competitor.name} #${term.position}`);
+}
+const sortedQueue = [...queue].sort((a, b) => b.priorityScore - a.priorityScore || (b.volume ?? -1) - (a.volume ?? -1));
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="description" content="Fran Legacy keyword research, competitor visibility and SEO content pipeline." />
+    <meta name="theme-color" content="#081a2b" />
+    <link rel="icon" type="image/png" href="/brand/favicon-512.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400..700&family=Newsreader:wght@500;600&display=swap" rel="stylesheet" />
+    <title>SEO Dashboard | Fran Legacy</title>
+  </head>
+  <body>
+    <header class="app-header">
+      <a class="brand" href="/" aria-label="Fran Legacy home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 42 42"><path d="M8 5h12v6h-6v7h8v6h-8v13H8V5Zm15 0h11v32H23V5Zm6 6v20" /></svg></span>
+        <span><strong>FRAN LEGACY</strong><small>SEO dashboard</small></span>
+      </a>
+      <nav aria-label="Dashboard sections"><a href="#overview">Overview</a><a href="#competitors">Competitors</a><a href="#opportunities">Commercial gaps</a><a href="#content">Content queue</a></nav>
+      <div class="header-date"><span>Research updated</span><strong>{dateLabel(research.collectedAt)}</strong></div>
+    </header>
+
+    <main>
+      <section class="page-title" id="overview">
+        <div><p>Internal planning workspace</p><h1>SEO research and content pipeline</h1><span>U.S. keyword data · franlegacy.com · Duckfund · Levine Capital</span></div>
+        <div class="page-actions"><a href="https://www.franlegacy.com/" target="_blank" rel="noreferrer">Open current website ↗</a><a href="#methodology">View methodology</a></div>
+      </section>
+
+      <aside class="data-notice">
+        <strong>Baseline:</strong> Keywords Everywhere returned no tracked U.S. ranking set for franlegacy.com. Google shows indexed pages, but Search Console is not connected here. This dashboard is a dated research snapshot, not live rank tracking.
+      </aside>
+
+      <section class="summary-grid" aria-label="Summary metrics">
+        <article><span>Drafts</span><strong>{drafts.length}</strong><small>complete working drafts</small></article>
+        <article><span>Published</span><strong>{stateItems.filter((item) => item.status === 'published').length}</strong><small>all drafts remain private</small></article>
+        <article><span>Modeled demand</span><strong>{compact.format(modeledDemand)}</strong><small>monthly searches across measured topics</small></article>
+        <article><span>Priority one</span><strong>{priorityOne}</strong><small>highest combined demand and fit</small></article>
+        <article><span>Commercial gaps</span><strong>{competitorResearch.commercialOpportunities.length}</strong><small>kept outside the blog queue</small></article>
+        <article><span>Data coverage</span><strong>{measuredItems.length}/50</strong><small>{zeroCount} measured zero · {unmeasuredCount} not queried</small></article>
+      </section>
+
+      <section class="panel" id="competitors">
+        <div class="panel-heading"><div><p>Competitive visibility</p><h2>Domain comparison</h2></div><span>Source: {competitorResearch.source}</span></div>
+        <p class="panel-description">The API returned up to 40 ranking keywords per domain. “Sample traffic” is the sum of the returned rows, not total estimated domain traffic.</p>
+        <div class="table-scroll">
+          <table class="comparison-table">
+            <thead><tr><th>Domain</th><th>Primary comparison role</th><th>Keywords returned</th><th>Top 3</th><th>Top 10</th><th>Sample traffic</th><th>Observed strength</th></tr></thead>
+            <tbody>
+              {competitors.map((company) => (
+                <tr>
+                  <td><strong>{company.name}</strong><a href={`https://${company.domain}`} target="_blank" rel="noreferrer">{company.domain} ↗</a></td>
+                  <td>{company.role}</td>
+                  <td><strong class="metric-number">{company.keywordsReturned}</strong></td>
+                  <td><strong class="metric-number">{company.top3}</strong></td>
+                  <td><strong class="metric-number">{company.top10}</strong><div class="mini-bar"><i style={`width:${(company.top10 / maxTopTen) * 100}%`}></i></div></td>
+                  <td><strong class="metric-number">{company.sampleTraffic}</strong><div class="mini-bar traffic"><i style={`width:${(company.sampleTraffic / maxTraffic) * 100}%`}></i></div></td>
+                  <td>{company.strength}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="ranking-columns">
+          {competitors.slice(1).map((company) => (
+            <article class="ranking-card">
+              <header><div><p>Top returned keywords</p><h3>{company.name}</h3></div><span>{company.top10} top-10 rankings</span></header>
+              <div class="rank-list"><div class="rank-head"><span>Keyword</span><span>Position</span><span>Est. visits</span></div>{company.topKeywords.map((term) => <div><strong>{term.keyword}</strong><span>#{term.position}</span><span>{term.estimatedTraffic}</span></div>)}</div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="panel" id="opportunities">
+        <div class="panel-heading"><div><p>Page ownership</p><h2>Commercial keyword opportunities</h2></div><span>{competitorResearch.commercialOpportunities.length} terms</span></div>
+        <p class="panel-description">These queries have service or program intent. They should be owned by conversion-focused pages rather than counted among the 50 articles.</p>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Keyword</th><th>Monthly searches</th><th>CPC</th><th>Paid competition</th><th>Recommended owner</th><th>Why it is separate</th></tr></thead>
+            <tbody>{competitorResearch.commercialOpportunities.map((item) => <tr><td><strong>{item.keyword}</strong></td><td><strong class="metric-number">{formatter.format(item.volume)}</strong></td><td>${item.cpc.toFixed(2)}</td><td>{Math.round(item.competition * 100)}%</td><td><code>{item.ownerUrl}</code></td><td>{item.reason}</td></tr>)}</tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="content">
+        <div class="panel-heading"><div><p>Editorial pipeline</p><h2>50-post content queue</h2></div><span>All items: drafted · review required</span></div>
+
+        <div class="cluster-summary">
+          {clusterCounts.map((item) => <div><i style={`background:${item.color}`}></i><span>{item.cluster}</span><strong>{item.count}</strong></div>)}
+        </div>
+
+        <div class="queue-controls">
+          <label class="search-control"><span>Search</span><input type="search" placeholder="Keyword, title, or audience" data-keyword-search /></label>
+          <div class="filter-set" role="group" aria-label="Filter by cluster"><button class="active" type="button" data-cluster="all">All <b>{queue.length}</b></button>{clusterCounts.map((item) => <button type="button" data-cluster={item.cluster}>{item.cluster} <b>{item.count}</b></button>)}</div>
+          <label><span>Sort by</span><select data-sort><option value="priority">Priority</option><option value="volume">Search volume</option><option value="date">Review date</option></select></label>
+        </div>
+
+        <aside class="metric-note">Volume is an estimated U.S. monthly average. A dash means the term was not queried in the capped research pass; 0 is a measured zero. “Competition” is paid-ad competition, not organic difficulty.</aside>
+
+        <div class="table-scroll content-table-wrap">
+          <table class="content-table">
+            <thead><tr><th>Priority</th><th>Draft title and keyword</th><th>Cluster</th><th>Monthly searches</th><th>CPC</th><th>Competition</th><th>Intent</th><th>Review date</th><th>Status / competitor signal</th></tr></thead>
+            <tbody data-queue-body>
+              {sortedQueue.map((item) => (
+                <tr data-row data-cluster={item.cluster} data-search={`${item.title} ${item.keyword} ${item.audience}`.toLowerCase()} data-priority={item.priorityScore} data-volume={item.volume ?? -1} data-date={item.plannedPublishDate}>
+                  <td><span class={`priority ${item.priority.toLowerCase()}`}>{item.priority}</span><small>Score {item.priorityScore.toFixed(1)}</small></td>
+                  <td><strong>{item.title}</strong><code>{item.keyword}</code><small>{item.audience}</small></td>
+                  <td><span class="cluster"><i style={`background:${clusterColors[item.cluster as keyof typeof clusterColors]}`}></i>{item.cluster}</span></td>
+                  <td><strong class="metric-number">{item.volume === null ? '—' : formatter.format(item.volume)}</strong><small>{item.volume === null ? 'not queried' : item.volume === 0 ? 'measured zero' : 'estimated / month'}</small></td>
+                  <td>{item.cpc === null ? '—' : `$${item.cpc.toFixed(2)}`}</td>
+                  <td>{item.competition === null ? '—' : `${Math.round(item.competition * 100)}%`}</td>
+                  <td><span class="intent">{item.intent}</span><small>{item.funnel}</small></td>
+                  <td>{dateLabel(item.plannedPublishDate)}</td>
+                  <td><span class="status"><i></i>Drafted</span><small>{competitorMentions.get(item.keyword.toLowerCase()) ?? 'Fran content gap'}</small></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p class="empty" hidden data-empty>No rows match this filter.</p>
+        </div>
+      </section>
+
+      <section class="panel notes-panel" id="methodology">
+        <div class="panel-heading"><div><p>Definitions and limits</p><h2>Methodology</h2></div><span>Collected {dateLabel(research.collectedAt)}</span></div>
+        <div class="notes-grid">
+          <article><h3>Keyword metrics</h3><p>{research.dataSource}, United States, USD. Metrics are dated estimates and do not forecast traffic or rankings.</p></article>
+          <article><h3>Competitor sample</h3><p>{competitorResearch.methodology}</p></article>
+          <article><h3>Fran baseline</h3><p>The ranking lookup returned no dataset for franlegacy.com. Search Console data is not connected in this repository.</p></article>
+          <article><h3>Publication boundary</h3><p>All 50 Markdown files are marked <code>draft: true</code> and <code>reviewRequired: true</code>. No public article routes exist.</p></article>
+          <article><h3>Claims</h3><p>Rates, fees, lending territory, closing speed, approvals, and investor-return language require written owner and legal/compliance review.</p></article>
+          <article><h3>Research cap</h3><p>This pass used {research.creditsUsedThisPass} keyword credits. Null means “not queried”; zero remains a measured result.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer><span>Fran Legacy internal SEO dashboard</span><span>Noindex · research snapshot</span><a href="/">Return to website ↗</a></footer>
+
+    <script>
+      const search = document.querySelector('input[data-keyword-search]');
+      const buttons = [...document.querySelectorAll('button[data-cluster]')];
+      const sort = document.querySelector('select[data-sort]');
+      const body = document.querySelector('[data-queue-body]');
+      const empty = document.querySelector('[data-empty]');
+      let activeCluster = 'all';
+
+      const updateRows = () => {
+        const query = search instanceof HTMLInputElement ? search.value.trim().toLowerCase() : '';
+        const rows = [...document.querySelectorAll('[data-row]')];
+        let visible = 0;
+        rows.forEach((row) => {
+          if (!(row instanceof HTMLElement)) return;
+          row.hidden = !((activeCluster === 'all' || row.dataset.cluster === activeCluster) && (!query || row.dataset.search?.includes(query)));
+          if (!row.hidden) visible += 1;
+        });
+        if (empty instanceof HTMLElement) empty.hidden = visible !== 0;
+      };
+
+      buttons.forEach((button) => button.addEventListener('click', () => {
+        if (!(button instanceof HTMLButtonElement)) return;
+        activeCluster = button.dataset.cluster ?? 'all';
+        buttons.forEach((item) => item.classList.toggle('active', item === button));
+        updateRows();
+      }));
+      search?.addEventListener('input', updateRows);
+      sort?.addEventListener('change', () => {
+        if (!(sort instanceof HTMLSelectElement) || !(body instanceof HTMLElement)) return;
+        const rows = [...body.querySelectorAll('[data-row]')];
+        rows.sort((a, b) => {
+          if (!(a instanceof HTMLElement) || !(b instanceof HTMLElement)) return 0;
+          if (sort.value === 'date') return (a.dataset.date ?? '').localeCompare(b.dataset.date ?? '');
+          const key = sort.value === 'volume' ? 'volume' : 'priority';
+          return Number(b.dataset[key] ?? -1) - Number(a.dataset[key] ?? -1);
+        });
+        rows.forEach((row) => body.append(row));
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  :global(*) { box-sizing: border-box; }
+  :global(html) { scroll-behavior: smooth; }
+  :global(body) { margin: 0; color: #122330; background: #f3f5f5; font-family: 'Instrument Sans', sans-serif; }
+  :global(a) { color: inherit; text-decoration: none; }
+  :global(button), :global(input), :global(select) { font: inherit; }
+  :global([hidden]) { display: none !important; }
+  :root { --navy: #081a2b; --blue: #167f96; --cyan: #58cce0; --line: #d7dddf; --muted: #667681; --paper: #fff; --mono: 'DM Mono', monospace; --serif: 'Newsreader', serif; }
+
+  .app-header { position: sticky; z-index: 10; top: 0; min-height: 70px; display: grid; grid-template-columns: 1fr auto 1fr; gap: 28px; align-items: center; padding: 0 30px; color: #fff; background: var(--navy); border-bottom: 1px solid rgba(255,255,255,.12); }
+  .brand { display: flex; align-items: center; gap: 11px; width: fit-content; }
+  .brand-mark { width: 34px; height: 34px; display: grid; place-items: center; color: var(--cyan); border: 1px solid currentColor; }
+  .brand-mark svg { width: 27px; fill: none; stroke: currentColor; stroke-width: 2; }
+  .brand strong, .brand small { display: block; }
+  .brand strong { font-size: 12px; letter-spacing: .1em; }
+  .brand small { margin-top: 2px; color: rgba(255,255,255,.5); font: 8px var(--mono); text-transform: uppercase; }
+  .app-header nav { display: flex; gap: 6px; }
+  .app-header nav a { padding: 9px 11px; color: rgba(255,255,255,.65); border-radius: 4px; font-size: 12px; }
+  .app-header nav a:hover { color: #fff; background: rgba(255,255,255,.08); }
+  .header-date { justify-self: end; text-align: right; }
+  .header-date span, .header-date strong { display: block; }
+  .header-date span { color: rgba(255,255,255,.45); font: 8px var(--mono); text-transform: uppercase; }
+  .header-date strong { margin-top: 3px; font-size: 12px; }
+
+  main { width: min(100%, 1680px); margin: 0 auto; padding: 32px; }
+  .page-title { display: flex; justify-content: space-between; gap: 40px; align-items: end; padding: 8px 0 26px; }
+  .page-title p, .panel-heading p { margin: 0 0 5px; color: var(--blue); font: 9px var(--mono); text-transform: uppercase; letter-spacing: .08em; }
+  h1 { margin: 0; font: 600 clamp(32px, 4vw, 48px)/1.05 var(--serif); }
+  .page-title > div > span { display: block; margin-top: 8px; color: var(--muted); font-size: 13px; }
+  .page-actions { display: flex; gap: 8px; }
+  .page-actions a { padding: 10px 13px; color: #29404e; border: 1px solid #bfc8cc; border-radius: 4px; background: #fff; font-size: 12px; font-weight: 600; }
+  .data-notice { padding: 14px 17px; color: #43545e; border: 1px solid #b8d8df; border-left: 4px solid var(--blue); background: #eefafd; font-size: 13px; line-height: 1.5; }
+  .data-notice strong { color: #173e4c; }
+
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin: 18px 0; }
+  .summary-grid article { min-width: 0; padding: 18px; border: 1px solid var(--line); border-radius: 5px; background: var(--paper); }
+  .summary-grid span, .summary-grid small { display: block; }
+  .summary-grid span { color: var(--muted); font: 8px var(--mono); text-transform: uppercase; letter-spacing: .06em; }
+  .summary-grid strong { display: block; margin: 12px 0 5px; font: 600 34px/1 var(--serif); color: var(--navy); }
+  .summary-grid small { color: var(--muted); font-size: 11px; line-height: 1.35; }
+
+  .panel { margin-top: 18px; padding: 22px; border: 1px solid var(--line); border-radius: 6px; background: var(--paper); box-shadow: 0 2px 8px rgba(8,26,43,.025); scroll-margin-top: 85px; }
+  .panel-heading { display: flex; justify-content: space-between; gap: 30px; align-items: end; }
+  .panel-heading h2 { margin: 0; font: 600 28px var(--serif); }
+  .panel-heading > span { color: var(--muted); font: 9px var(--mono); }
+  .panel-description { max-width: 960px; margin: 12px 0 18px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+  .table-scroll { overflow-x: auto; border: 1px solid var(--line); }
+  table { width: 100%; min-width: 1040px; border-collapse: collapse; }
+  th { padding: 11px 12px; color: #51636d; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #f0f3f3; font: 8px var(--mono); text-align: left; text-transform: uppercase; letter-spacing: .05em; }
+  td { padding: 13px 12px; color: #31444f; border-bottom: 1px solid #e2e6e7; vertical-align: top; font-size: 12px; line-height: 1.4; }
+  tbody tr:last-child td { border-bottom: 0; }
+  tbody tr:nth-child(even) { background: #fafbfb; }
+  tbody tr:hover { background: #f2fafb; }
+  td strong, td a, td small, td code { display: block; }
+  td > a { margin-top: 4px; color: var(--blue); font: 8px var(--mono); }
+  td code { color: #166d80; font: 9px var(--mono); }
+  td small { margin-top: 5px; color: #71808a; font-size: 10px; }
+  .metric-number { color: var(--navy); font: 600 20px var(--serif); }
+  .mini-bar { width: 95px; height: 3px; margin-top: 7px; background: #dfe5e6; }
+  .mini-bar i { display: block; height: 100%; background: var(--blue); }
+  .mini-bar.traffic i { background: #c66d2c; }
+
+  .ranking-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+  .ranking-card { border: 1px solid var(--line); border-radius: 5px; overflow: hidden; }
+  .ranking-card header { display: flex; justify-content: space-between; gap: 20px; align-items: end; padding: 15px 16px; background: #f8f9f9; border-bottom: 1px solid var(--line); }
+  .ranking-card header p { margin: 0 0 3px; color: var(--muted); font: 8px var(--mono); text-transform: uppercase; }
+  .ranking-card h3 { margin: 0; font: 600 21px var(--serif); }
+  .ranking-card header > span { color: var(--blue); font-size: 11px; font-weight: 700; }
+  .rank-list > div { display: grid; grid-template-columns: 1fr 70px 70px; gap: 12px; padding: 9px 14px; border-bottom: 1px solid #e4e8e9; font-size: 11px; }
+  .rank-list > div:last-child { border: 0; }
+  .rank-list .rank-head { color: var(--muted); background: #fbfcfc; font: 8px var(--mono); text-transform: uppercase; }
+  .rank-list strong { font-weight: 600; }
+  .rank-list span:nth-child(n+2) { text-align: right; }
+
+  .cluster-summary { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 18px 0; }
+  .cluster-summary > div { display: grid; grid-template-columns: 8px 1fr auto; gap: 9px; align-items: center; padding: 11px 12px; border: 1px solid var(--line); border-radius: 4px; background: #fafbfb; }
+  .cluster-summary i, .cluster i { width: 7px; height: 7px; border-radius: 50%; }
+  .cluster-summary span { color: #4e606a; font-size: 11px; }
+  .cluster-summary strong { font: 600 17px var(--serif); }
+  .queue-controls { display: grid; grid-template-columns: minmax(220px, .7fr) 2fr 140px; gap: 12px; align-items: end; padding: 14px; border: 1px solid var(--line); background: #f5f7f7; }
+  .queue-controls label { display: grid; gap: 6px; }
+  .queue-controls label > span { color: #586a74; font: 8px var(--mono); text-transform: uppercase; }
+  .queue-controls input, .queue-controls select { min-height: 42px; padding: 0 11px; color: #1d3542; border: 1px solid #bfc9cd; border-radius: 3px; background: #fff; }
+  .filter-set { display: flex; flex-wrap: wrap; gap: 5px; }
+  .filter-set button { min-height: 42px; padding: 0 10px; color: #354a55; border: 1px solid #c5ced1; border-radius: 3px; background: #fff; cursor: pointer; font-size: 11px; }
+  .filter-set button b { margin-left: 4px; color: #78878f; font: 8px var(--mono); }
+  .filter-set button.active { color: #fff; border-color: var(--navy); background: var(--navy); }
+  .filter-set button.active b { color: var(--cyan); }
+  .metric-note { padding: 10px 13px; color: #5f7079; border: 1px solid var(--line); border-top: 0; background: #fbfcfc; font-size: 11px; line-height: 1.45; }
+  .content-table-wrap { border-top: 0; }
+  .content-table { min-width: 1450px; }
+  .content-table th:nth-child(2) { width: 27%; }
+  .content-table td:nth-child(2) > strong { color: #142b38; font: 600 16px/1.2 var(--serif); }
+  .priority { display: inline-block; padding: 4px 6px; color: #294107; border: 1px solid #b1c873; border-radius: 3px; background: #eef5da; font: 500 8px var(--mono); }
+  .priority.p2 { color: #74440f; border-color: #dab37e; background: #fff0dd; }
+  .priority.p3 { color: #59686e; border-color: #c6cdcf; background: #eff2f2; }
+  .cluster { display: flex; gap: 7px; align-items: center; }
+  .intent { display: inline-block; padding: 3px 6px; border: 1px solid #c4cdd0; border-radius: 3px; color: #455a65; font: 8px var(--mono); text-transform: uppercase; }
+  .status { display: flex; align-items: center; gap: 6px; color: #256844; font-weight: 700; }
+  .status i { width: 6px; height: 6px; border-radius: 50%; background: #39a36c; }
+  .empty { margin: 0; padding: 35px; text-align: center; }
+
+  .notes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 18px; background: var(--line); border: 1px solid var(--line); }
+  .notes-grid article { min-height: 135px; padding: 16px; background: #fff; }
+  .notes-grid h3 { margin: 0 0 8px; font-size: 13px; }
+  .notes-grid p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.55; }
+  .notes-grid code { color: #166d80; font: 9px var(--mono); }
+  footer { width: min(100%, 1680px); display: flex; justify-content: space-between; gap: 24px; margin: 0 auto; padding: 20px 32px 35px; color: #6f7e86; font: 8px var(--mono); text-transform: uppercase; }
+  footer a { color: var(--blue); }
+
+  @media (max-width: 1180px) {
+    .app-header { grid-template-columns: 1fr auto; }
+    .app-header nav { display: none; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); }
+    .queue-controls { grid-template-columns: 1fr; }
+    .cluster-summary { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 760px) {
+    .app-header { padding: 0 16px; }
+    .header-date span { display: none; }
+    main { padding: 20px 14px; }
+    .page-title, .panel-heading { align-items: flex-start; flex-direction: column; gap: 14px; }
+    .page-actions { width: 100%; }
+    .page-actions a { flex: 1; text-align: center; }
+    .summary-grid { grid-template-columns: 1fr 1fr; }
+    .summary-grid article { padding: 14px; }
+    .ranking-columns { grid-template-columns: 1fr; }
+    .cluster-summary { grid-template-columns: 1fr 1fr; }
+    .panel { padding: 15px; }
+    .notes-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; padding: 5px 14px 25px; }
+  }
+  @media (max-width: 430px) {
+    .summary-grid { grid-template-columns: 1fr; }
+    .cluster-summary, .filter-set { grid-template-columns: 1fr; display: grid; }
+  }
+  @media (prefers-reduced-motion: reduce) { :global(html) { scroll-behavior: auto; } }
+</style>

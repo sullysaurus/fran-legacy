@@ -1,0 +1,80 @@
+{
+  "collectedAt": "2026-08-28",
+  "country": "United States",
+  "source": "Keywords Everywhere domain-keyword lookup",
+  "methodology": "The competitor API returned up to 40 ranking keywords per domain, ordered by estimated monthly traffic. Fran Legacy returned no tracked ranking set. Traffic below is the sum of the returned sample, not total domain traffic.",
+  "competitors": [
+    {
+      "name": "Fran Legacy",
+      "domain": "franlegacy.com",
+      "role": "Baseline",
+      "keywordsReturned": 0,
+      "top3": 0,
+      "top10": 0,
+      "sampleTraffic": 0,
+      "strength": "Clear first-party relevance across EMD, private money, creative acquisition, and rental strategy, but no measurable Keywords Everywhere ranking footprint yet.",
+      "topKeywords": []
+    },
+    {
+      "name": "Duckfund",
+      "domain": "duckfund.com",
+      "role": "Primary EMD benchmark",
+      "keywordsReturned": 40,
+      "top3": 22,
+      "top10": 35,
+      "sampleTraffic": 696,
+      "strength": "Commercial real estate EMD education, refundable-deposit questions, option-fee language, and state-specific earnest-money coverage.",
+      "topKeywords": [
+        {"keyword":"commercial land value","position":3,"estimatedTraffic":57},
+        {"keyword":"seller financing commercial property","position":2,"estimatedTraffic":52},
+        {"keyword":"do you get earnest money back","position":5,"estimatedTraffic":47},
+        {"keyword":"best commercial properties","position":1,"estimatedTraffic":43},
+        {"keyword":"how to buy commercial property with no money","position":3,"estimatedTraffic":38},
+        {"keyword":"what is option fee in real estate","position":3,"estimatedTraffic":31},
+        {"keyword":"deposit vs down payment","position":3,"estimatedTraffic":25},
+        {"keyword":"gator loans","position":1,"estimatedTraffic":15},
+        {"keyword":"florida earnest money deposit","position":1,"estimatedTraffic":12},
+        {"keyword":"gap funding for real estate investors","position":2,"estimatedTraffic":8},
+        {"keyword":"earnest money commercial real estate","position":2,"estimatedTraffic":8},
+        {"keyword":"what happens if earnest money is late","position":3,"estimatedTraffic":5}
+      ]
+    },
+    {
+      "name": "Levine Capital",
+      "domain": "levinecapital.com",
+      "role": "Broad lending benchmark",
+      "keywordsReturned": 40,
+      "top3": 10,
+      "top10": 23,
+      "sampleTraffic": 142,
+      "strength": "Direct lender-intent terms for EMD and gap funding, plus visible coverage of Morby Method, DSCR, fix-and-flip, bridge, and construction programs.",
+      "topKeywords": [
+        {"keyword":"what is the morby method","position":1,"estimatedTraffic":15},
+        {"keyword":"emd lender","position":1,"estimatedTraffic":15},
+        {"keyword":"emd loan","position":3,"estimatedTraffic":14},
+        {"keyword":"gap lenders","position":3,"estimatedTraffic":11},
+        {"keyword":"gap funding lenders","position":2,"estimatedTraffic":8},
+        {"keyword":"gator lending","position":7,"estimatedTraffic":7},
+        {"keyword":"cash out refinance no seasoning","position":3,"estimatedTraffic":5},
+        {"keyword":"best transactional funding","position":11,"estimatedTraffic":4},
+        {"keyword":"real estate gap funding","position":9,"estimatedTraffic":2},
+        {"keyword":"transactional lenders","position":23,"estimatedTraffic":1},
+        {"keyword":"second position gap funding","position":5,"estimatedTraffic":1},
+        {"keyword":"gap lender for real estate investors","position":6,"estimatedTraffic":1}
+      ]
+    }
+  ],
+  "commercialOpportunities": [
+    {"keyword":"dscr loans","volume":49500,"cpc":4.08,"competition":0.64,"ownerUrl":"Proposed DSCR loan page","reason":"Commercial lender intent; do not target with an informational post."},
+    {"keyword":"fix and flip loans","volume":4400,"cpc":7.71,"competition":0.38,"ownerUrl":"Proposed fix-and-flip financing page","reason":"Commercial loan-program intent."},
+    {"keyword":"transactional lenders","volume":390,"cpc":9.58,"competition":0.77,"ownerUrl":"/emd-lending/","reason":"High-value service intent and a direct Levine ranking gap."},
+    {"keyword":"transactional funding for wholesalers","volume":50,"cpc":8.79,"competition":0.75,"ownerUrl":"/emd-lending/","reason":"Decision-stage funding intent belongs to the EMD service page, not a blog post."},
+    {"keyword":"gator lending","volume":170,"cpc":5.21,"competition":0.55,"ownerUrl":"/emd-lending/","reason":"Industry language closely associated with EMD and transactional funding."},
+    {"keyword":"gap funding lenders","volume":110,"cpc":9.96,"competition":0.8,"ownerUrl":"Proposed gap-funding page","reason":"Strong commercial intent; Levine ranks #2 in the tracked sample."},
+    {"keyword":"emd loan","volume":70,"cpc":6.8,"competition":0.5,"ownerUrl":"/emd-lending/","reason":"Core offer term; Levine ranks #3 in the tracked sample."},
+    {"keyword":"hard money lenders raleigh nc","volume":50,"cpc":7.1,"competition":0.77,"ownerUrl":"Proposed Raleigh private-lending page","reason":"Local commercial demand; only pursue if Fran confirms this product and market."},
+    {"keyword":"emd lender","volume":40,"cpc":6.51,"competition":0.67,"ownerUrl":"/emd-lending/","reason":"Core decision-stage term; Levine ranks #1 in the tracked sample."},
+    {"keyword":"transactional funding near me","volume":10,"cpc":0,"competition":0.29,"ownerUrl":"/emd-lending/","reason":"Location-sensitive service intent."},
+    {"keyword":"private money lender raleigh nc","volume":0,"cpc":0,"competition":0,"ownerUrl":"/private-money-lenders/","reason":"Zero reported volume, but direct local business fit and first-party relevance."}
+  ]
+}
